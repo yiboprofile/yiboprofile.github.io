@@ -556,7 +556,8 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 
 /* the TEDx stage clip: a lighter grade than the old crowd footage so the stage reads */
 .hero-media video{filter:brightness(.5) saturate(.85) contrast(1.05);object-position:62% 35%}
-@media (max-width:860px){.hero-media video{object-position:76% 35%}}
+/* phones: the whole 16:9 frame, near the top, with the words in the dark space below it */
+@media (max-width:860px){.hero-media{background:#000}.hero-media video{object-fit:contain;object-position:50% 16%;filter:brightness(.8) saturate(.9)}.stage-chip{font-size:10px;letter-spacing:.1em;white-space:nowrap}}
 .stage-chip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;margin-bottom:clamp(18px,2.4vw,28px);padding:8px 14px;border:1px solid rgba(244,237,227,.28);border-radius:999px;background:rgba(17,15,13,.35);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;transition:border-color .25s,color .25s}
 .stage-chip i{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
 .stage-chip:hover,.stage-chip:focus-visible{border-color:var(--amber);color:var(--amber)}
