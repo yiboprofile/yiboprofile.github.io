@@ -507,6 +507,20 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .tc-year b{color:var(--ink);font-weight:600}
 .tc-year .months i{height:16px}
 @media (max-width:860px){.hhC{grid-template-columns:1fr}.tiercard{grid-template-columns:1fr}.tc-col+.tc-col{border-left:0;border-top:1px solid var(--line)}.hh-foot{grid-template-columns:1fr}.vfacts{gap:0 18px}}
+/* 03: the product in a row, the trust-good ladder and the argument beside it */
+#dermat .h2{font-size:clamp(36px,3.8vw,60px)}
+#dermat .pname{font-size:clamp(20px,1.8vw,28px)}
+.qstack .quote.side{color:var(--ink-2);border-left-color:var(--line-2)}.qstack .quote.side .lab{color:var(--ink-3)}
+/* C */
+.dC .qstack .quote{font-size:clamp(17px,1.25vw,21px)}
+.shots{display:grid;gap:14px}.shots.five{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.shots figure{margin:0;min-width:0}.shots img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:var(--bg-2)}
+.shots figcaption{margin-top:8px;font-size:12px;line-height:1.4;color:var(--ink-3)}.shots figcaption b{color:var(--ink);font-weight:500}
+.stepsbox{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}.stepsbox>.mono{display:block;margin-bottom:6px}
+.stepsbox .steps .t{font-size:21px}.stepsbox .steps .d{font-size:13px}
+.dC .qstack{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.steps .tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:999px;background:var(--amber);color:#110f0d;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em}
+@media (max-width:860px){.shots.five{grid-template-columns:repeat(3,minmax(0,1fr))}}
 /* 05 + 06: facts as one strip, the argument on one screen */
 .hh-facts{list-style:none;margin:18px 0 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 36px;align-items:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
 .hh-facts li{display:flex;align-items:baseline;gap:12px}
@@ -879,64 +893,39 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="dermat-h" data-r>A skin check is a trust good. <span class="soft">What does $0 say?</span></h2>
       <p class="pname" data-r>Dermat AI. <em>No price at all.</em></p>
     </div>
-    <div class="facts" style="--n:3" data-r>
-      <div><span class="mono muted">Price</span><span class="v amber">$0</span><span class="s">nothing to buy inside</span></div>
-      <div><span class="mono muted">Downloads</span><span class="v tnum">1,996</span><span class="s">811 App Store, 1,185 Google Play, in 15 months</span></div>
-      <div><span class="mono muted">Still installed</span><span class="v tnum">~117</span><span class="s">Android devices now; peak 221</span></div>
-    </div>
-    <div class="intro">
-      <p class="lede" data-r>An iPhone and Android app for looking after your skin. You scan a photo and it shows what it may be and how sure the model is. There’s also a skin diary, a routine built for your skin and an AI assistant you can ask at any hour. It’s free, with nothing to buy inside.</p>
-      <div class="links" data-r style="--d:.1s">
+    <div class="hhC dC">
+      <div>
+        <div class="vfacts" data-r>
+          <div><span class="mono">Price</span><b class="amber">$0</b><small>nothing to buy inside</small></div>
+          <div><span class="mono">Downloads</span><b>1,996</b><small>in 15 months, two stores</small></div>
+          <div><span class="mono">Still installed</span><b>~117</b><small>Android devices; peak 221</small></div>
+        </div>
+        <p class="lede hh-lede" data-r>An iPhone and Android app for looking after your skin. You scan a photo and it shows what it may be and how sure the model is. There’s also a skin diary, a routine built for your skin and an AI assistant you can ask at any hour. It’s free, with nothing to buy inside.</p>
+        <div class="links" data-r>
         <a href="https://dermatai.com/" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M21.17 8H12M3.95 6.06 8.54 14M10.88 21.94 15.46 14"/></svg>dermatai.com <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a>
         <a href="https://apps.apple.com/us/app/dermat-ai/id6748587012" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M16.37 12.79c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.39-3.69zM14.1 6.04c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>On the App Store <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a>
         <a href="https://play.google.com/store/apps/details?id=com.dermatai.app" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M4.2 2.3a1.5 1.5 0 0 0-.45 1.1v17.2c0 .44.17.83.45 1.1l9.55-9.7L4.2 2.3zm10.75 8.5 2.7-2.75L6.2 1.6a1.5 1.5 0 0 0-1.1-.2l9.85 9.4zm0 2.4-9.85 9.4c.36.08.75.03 1.1-.17l11.45-6.48-2.7-2.75zm3.98-3.88-3.03 3.08 3.03 3.08 2.68-1.52c.9-.5.9-1.6 0-2.1l-2.68-1.54z"/></svg>On Google Play <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a>
       </div>
-    </div>
-
-    <div class="phones" id="dermatPhones" style="--award:2.37fr">
-      <figure data-p="0"><img src="media/dermat-scan.webp" width="301" height="639" loading="lazy" decoding="async" alt="Dermat AI scanner: a photo of a face, buttons for gallery and camera, and a skin analysis reading healthy skin with severity none" /><figcaption><b>Scan:</b> a photo in, a condition and a confidence score out.</figcaption></figure>
-      <figure data-p="1"><img src="media/dermat-analysis.webp" width="361" height="769" loading="lazy" decoding="async" alt="Dermat AI skin health dashboard: latest scan healthy at 90 percent confidence, a health score trend and a conditions breakdown" /><figcaption><b>Dashboard:</b> the latest result, the trend, the breakdown.</figcaption></figure>
-      <figure data-p="2"><img src="media/dermat-diary.webp" width="369" height="784" loading="lazy" decoding="async" alt="Dermat AI skin diary: dated entries for face and hand, each with a photo, a note and recommendations" /><figcaption><b>Diary:</b> each scan saved with notes, to compare over time.</figcaption></figure>
-      <figure data-p="3"><img src="media/dermat-routine.webp" width="369" height="785" loading="lazy" decoding="async" alt="Dermat AI personalized skin routine: morning steps, evening routine and recommended product types" /><figcaption><b>Routine:</b> morning and evening steps for the result.</figcaption></figure>
-      <figure data-p="4"><img src="media/dermat-assistant.webp" width="369" height="785" loading="lazy" decoding="async" alt="Dermat AI skin assistant: a chat where the assistant answers questions about skin concerns" /><figcaption><b>Assistant:</b> questions answered in a chat.</figcaption></figure>
-    </div>
-
-    <div class="grid2" style="margin-top:clamp(56px,7vw,100px)">
-      <div class="panel" data-r>
-        <span class="mono">Who found it</span>
-        <div class="chart-dl" data-src="dermat" data-top="400" data-step="100" data-every="3"></div>
-        <div class="kv"><span class="big tnum">1,996</span><p>downloads in 15 months: 811 on the App Store, 1,185 on Google Play. The most, 378, in Jan 2026.</p></div>
-        <p class="note">Downloads by month. App Store: “Total Downloads” from App Store Connect. Google Play: “User acquisition, all users” from the Play Console. Both count reinstalls; the last month is as exported. The rise from November to January came from my social media marketing.</p>
+        <div class="qstack" data-r style="margin-top:24px"><p class="quote" data-r><span class="mono lab">What I learned</span>Giving Dermat AI away reached about four times as many people a month as SoundSplit, which charges for minutes. <span class="soft">People who pay nothing still trust the answer, though, so every answer ends with a note that it is not a diagnosis.</span></p></div>
       </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">Who kept it</span>
-        <div id="installed"></div>
-        <div class="kv"><span class="big tnum">~117</span><p>Android devices still have it installed, a year after launch</p></div>
-        <p class="note">Google Play “installed audience”: devices with the app installed, averaged by week, from the Play Console. It counts people who kept the app, not new downloads.</p>
-      </div>
-      <div class="panel" data-r>
-        <span class="mono">Where Android installs came from</span>
-        <div class="chart-share"><div class="share" aria-hidden="true"><i style="width:35.02%;background:#f2a93b"></i><i style="width:3.71%;background:rgba(242,169,59,.62)"></i><i style="width:3.63%;background:rgba(244,237,227,.78)"></i><i style="width:2.70%;background:rgba(244,237,227,.5)"></i><i style="width:54.94%;background:rgba(244,237,227,.18)"></i></div><ul class="share-list"><li><i style="background:#f2a93b"></i><span>India</span><b>35%</b></li><li><i style="background:rgba(242,169,59,.62)"></i><span>Bangladesh</span><b>4%</b></li><li><i style="background:rgba(244,237,227,.78)"></i><span>United States</span><b>4%</b></li><li><i style="background:rgba(244,237,227,.5)"></i><span>Pakistan</span><b>3%</b></li><li><i style="background:rgba(244,237,227,.18)"></i><span>All other countries</span><b>55%</b></li></ul></div>
-        <p class="note">Share of all 1,185 Google Play installs. The console names its top four countries; the rest are grouped.</p>
-      </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">When can you tell if it was right?</span>
-        <ol class="steps" style="--n:3">
+      <div>
+        <div class="shots five" data-r><figure data-p="0"><img src="media/dermat-scan.webp" width="301" height="639" loading="lazy" decoding="async" alt="Dermat AI scanner: a photo of a face, buttons for gallery and camera, and a skin analysis reading healthy skin with severity none" /><figcaption><b>Scan</b></figcaption></figure><figure data-p="1"><img src="media/dermat-analysis.webp" width="361" height="769" loading="lazy" decoding="async" alt="Dermat AI skin health dashboard: latest scan healthy at 90 percent confidence, a health score trend and a conditions breakdown" /><figcaption><b>Dashboard</b></figcaption></figure><figure data-p="2"><img src="media/dermat-diary.webp" width="369" height="784" loading="lazy" decoding="async" alt="Dermat AI skin diary: dated entries for face and hand, each with a photo, a note and recommendations" /><figcaption><b>Diary</b></figcaption></figure><figure data-p="3"><img src="media/dermat-routine.webp" width="369" height="785" loading="lazy" decoding="async" alt="Dermat AI personalized skin routine: morning steps, evening routine and recommended product types" /><figcaption><b>Routine</b></figcaption></figure><figure data-p="4"><img src="media/dermat-assistant.webp" width="369" height="785" loading="lazy" decoding="async" alt="Dermat AI skin assistant: a chat where the assistant answers questions about skin concerns" /><figcaption><b>Assistant</b></figcaption></figure></div>
+        <div class="stepsbox" data-r>
+          <span class="mono muted">When can you tell if it was right?</span>
+          <ol class="steps" style="--n:3">
           <li><span class="t">Search good</span><span class="d">You can judge it before you buy.</span><span class="e">e.g. a T-shirt</span></li>
           <li><span class="t">Experience good</span><span class="d">You can judge it after you use it.</span><span class="e">e.g. a restaurant meal</span></li>
           <li class="here"><span class="t">Trust good</span><span class="d">You may never judge it yourself.</span><span class="e">e.g. a diagnosis</span><span class="tag">A skin check sits here</span></li>
         </ol>
+        </div>
+        <div class="qstack" data-r><p class="quote side" data-r><span class="mono lab">Why it matters</span>A skin check is a trust good: you can’t tell whether the answer was right until someone qualified tells you, so what a person will pay depends on what they believe about who made it. What does $0 say about a health app from a student team? In the app, a button at the top of the assistant opens the full notice, and every answer has a flag to report it as wrong.</p></div>
       </div>
     </div>
-
-    <div class="reflect pair">
-      <p class="quote" data-r><span class="mono lab">What I learned</span>Giving Dermat AI away reached about four times as many people a month as SoundSplit, which charges for minutes. <span class="soft">People who pay nothing still trust the answer, though, so every answer ends with a note that it is not a diagnosis.</span></p>
-      <p class="quote side" data-r style="--d:.1s"><span class="mono lab">Why it matters</span>A skin check is a trust good: you can’t tell whether the answer was right until someone qualified tells you, so what a person will pay depends on what they believe about who made it. What does $0 say about a health app from a student team? In the app, a button at the top of the assistant opens the full notice, and every answer has a flag to report it as wrong.</p>
+    <div class="hh-foot" data-r>
+      <div><span class="mono">Team</span><p>Just me. I designed and built Dermat AI, connected the AI model, published it on both stores and did the marketing.</p></div>
+      <div><span class="mono">Award</span><p><img src="assets/photos/award-dermat.webp" width="1600" height="1244" loading="lazy" decoding="async" alt="Certificate: Emerging Standout Award, DFW IT Talent Champion Competition, to Team Dermat AI, September 2025" />Emerging Standout Award, DFW IT Talent Champion, September 2025. Entered on my own.</p></div>
     </div>
   </div>
-
-  <div class="wrap"><div class="team" data-r><span class="mono">Team</span><p>Just me. I designed and built Dermat AI, connected the AI model, published it on both stores and did the marketing.</p></div>
-    <div class="team awardline" data-r><span class="mono">Award</span><div class="aw"><img src="assets/photos/award-dermat.webp" width="1600" height="1244" loading="lazy" decoding="async" alt="Certificate: Emerging Standout Award, DFW IT Talent Champion Competition, to Team Dermat AI, September 2025" /><p>Emerging Standout Award, DFW IT Talent Champion, September 2025. Entered on my own.</p></div></div></div>
 </section>
 
 <!-- ================= 04 HOLIDAYHELPERAI ================= -->
