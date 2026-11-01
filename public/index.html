@@ -469,6 +469,11 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .phones.with-award .award-card{align-self:center}
 .award-card img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line);background:var(--bg-2);display:block}
 .award-card figcaption{margin-top:12px;font-size:13px;line-height:1.45;color:var(--ink-3)}
+.one-fig{max-width:760px}
+.team.awardline{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.team .aw{display:flex;align-items:center;gap:18px}
+.team .aw img{flex:none;width:132px;height:auto;border-radius:4px;border:1px solid var(--line);filter:saturate(.55) brightness(.85)}
+.team .aw p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-3)}
 /* pricing page and award slide: columns in proportion to each image's width-to-height, so both are the same height */
 @media (min-width:901px){.grid2.same-h{grid-template-columns:minmax(0,1.306fr) minmax(0,1.772fr)}}
 @media (max-width:860px){
@@ -814,13 +819,12 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       </div>
     </div>
 
-    <div class="phones with-award" id="dermatPhones" style="--award:2.37fr">
-      <figure data-p="0"><img src="media/dermat-scan.webp" width="540" height="1170" loading="lazy" decoding="async" alt="Dermat AI scanner: a photo of a face, buttons for gallery and camera, and a skin analysis reading healthy skin with severity none" /><figcaption><b>Scan:</b> a photo in, a condition and a confidence score out.</figcaption></figure>
-      <figure data-p="1"><img src="media/dermat-analysis.webp" width="540" height="1170" loading="lazy" decoding="async" alt="Dermat AI skin health dashboard: latest scan healthy at 90 percent confidence, a health score trend and a conditions breakdown" /><figcaption><b>Dashboard:</b> the latest result, the trend, the breakdown.</figcaption></figure>
-      <figure data-p="2"><img src="media/dermat-diary.webp" width="540" height="1170" loading="lazy" decoding="async" alt="Dermat AI skin diary: dated entries for face and hand, each with a photo, a note and recommendations" /><figcaption><b>Diary:</b> each scan saved with notes, to compare over time.</figcaption></figure>
-      <figure data-p="3"><img src="media/dermat-routine.webp" width="540" height="1170" loading="lazy" decoding="async" alt="Dermat AI personalized skin routine: morning steps, evening routine and recommended product types" /><figcaption><b>Routine:</b> morning and evening steps for the result.</figcaption></figure>
-      <figure data-p="4"><img src="media/dermat-assistant.webp" width="540" height="1170" loading="lazy" decoding="async" alt="Dermat AI skin assistant: a chat where the assistant answers questions about skin concerns" /><figcaption><b>Assistant:</b> questions answered in a chat.</figcaption></figure>
-      <figure class="award-card"><img src="assets/photos/award-dermat.webp" width="1600" height="1244" loading="lazy" decoding="async" alt="Certificate: Emerging Standout Award, DFW IT Talent Champion Competition, to Team Dermat AI, 15 September 2025" /><figcaption>Emerging Standout Award, DFW IT Talent Champion, September 2025. Entered on my own.</figcaption></figure>
+    <div class="phones" id="dermatPhones" style="--award:2.37fr">
+      <figure data-p="0"><img src="media/dermat-scan.webp" width="301" height="639" loading="lazy" decoding="async" alt="Dermat AI scanner: a photo of a face, buttons for gallery and camera, and a skin analysis reading healthy skin with severity none" /><figcaption><b>Scan:</b> a photo in, a condition and a confidence score out.</figcaption></figure>
+      <figure data-p="1"><img src="media/dermat-analysis.webp" width="361" height="769" loading="lazy" decoding="async" alt="Dermat AI skin health dashboard: latest scan healthy at 90 percent confidence, a health score trend and a conditions breakdown" /><figcaption><b>Dashboard:</b> the latest result, the trend, the breakdown.</figcaption></figure>
+      <figure data-p="2"><img src="media/dermat-diary.webp" width="369" height="784" loading="lazy" decoding="async" alt="Dermat AI skin diary: dated entries for face and hand, each with a photo, a note and recommendations" /><figcaption><b>Diary:</b> each scan saved with notes, to compare over time.</figcaption></figure>
+      <figure data-p="3"><img src="media/dermat-routine.webp" width="369" height="785" loading="lazy" decoding="async" alt="Dermat AI personalized skin routine: morning steps, evening routine and recommended product types" /><figcaption><b>Routine:</b> morning and evening steps for the result.</figcaption></figure>
+      <figure data-p="4"><img src="media/dermat-assistant.webp" width="369" height="785" loading="lazy" decoding="async" alt="Dermat AI skin assistant: a chat where the assistant answers questions about skin concerns" /><figcaption><b>Assistant:</b> questions answered in a chat.</figcaption></figure>
     </div>
 
     <div class="grid2" style="margin-top:clamp(56px,7vw,100px)">
@@ -857,7 +861,8 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
     </div>
   </div>
 
-  <div class="wrap"><div class="team" data-r><span class="mono">Team</span><p>Just me. I designed and built Dermat AI, connected the AI model, published it on both stores and did the marketing.</p></div></div>
+  <div class="wrap"><div class="team" data-r><span class="mono">Team</span><p>Just me. I designed and built Dermat AI, connected the AI model, published it on both stores and did the marketing.</p></div>
+    <div class="team awardline" data-r><span class="mono">Award</span><div class="aw"><img src="assets/photos/award-dermat.webp" width="1600" height="1244" loading="lazy" decoding="async" alt="Certificate: Emerging Standout Award, DFW IT Talent Champion Competition, to Team Dermat AI, September 2025" /><p>Emerging Standout Award, DFW IT Talent Champion, September 2025. Entered on my own.</p></div></div></div>
 </section>
 
 <!-- ================= 04 HOLIDAYHELPERAI ================= -->
@@ -906,11 +911,11 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       </div>
       <p class="quote panel-q" data-r style="--d:.16s"><span class="mono lab">What I learned</span>The tiers are one product with features taken away, so what a person pays depends on which feature they can’t do without. <span class="soft">Each step roughly doubles the price.</span></p>
     </div>
-    <div class="grid2 same-h" style="margin-top:12px;align-items:start">
+    <div class="one-fig" style="margin-top:12px">
       <figure data-r><div class="photo"><img class="zoom" src="media/hhai-pricing.webp" width="1280" height="980" loading="lazy" decoding="async" alt="The HolidayHelperAI pricing page: Standard $2 a month or $20 a year, Premium $4 or $40, Enterprise $8.99 or $80.99" /></div><figcaption class="cap">holidayhelperai.com/pricing, October 2026.</figcaption></figure>
-      <figure data-r style="--d:.08s"><div class="photo"><img class="zoom" src="assets/photos/award-holidayhelper.webp" width="1386" height="782" loading="lazy" decoding="async" alt="The DCIA Stellar Young Achiever Award slide for HolidayHelperAI, naming Alan Wang as team leader" /></div><figcaption class="cap">The Stellar Young Achiever award slide from DCIA, the DFW IT Association, 2023–24, with the team listed.</figcaption></figure>
     </div>
     <div class="team" data-r><span class="mono">Team</span><p>I led it, with William Liu, Raymond Zhou, Owen Liu and Hanna Lee, and James Wang as advisor.</p></div>
+    <div class="team awardline" data-r><span class="mono">Award</span><div class="aw"><img src="assets/photos/award-holidayhelper.webp" width="1386" height="782" loading="lazy" decoding="async" alt="The DCIA Stellar Young Achiever Award slide for HolidayHelperAI, naming Alan Wang as team leader" /><p>Stellar Young Achiever Award, DCIA (the DFW IT Association), 2023–24.</p></div></div>
   </div>
 </section>
 
@@ -937,13 +942,12 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       </div>
     </div>
 
-    <div class="phones with-award" id="ssPhones" style="--award:2.46fr">
+    <div class="phones" id="ssPhones" style="--award:2.46fr">
       <figure data-p="0"><img src="media/soundsplit-import.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit: an empty song screen with an Add Song button and a Subscribe button" /><figcaption><b>Import:</b> add a song from the phone.</figcaption></figure>
       <figure data-p="1"><img src="media/soundsplit-stems.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit: a grid of stems to choose, such as vocals, drums, bass, piano and guitar, with waveform previews" /><figcaption><b>Split:</b> choose the stems and preview each one.</figcaption></figure>
       <figure data-p="2"><img src="media/soundsplit-mixer-hd.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit's mixer: one slider per instrument above a song called Shape of You" /><figcaption><b>Mix:</b> one slider per stem.</figcaption></figure>
       <figure data-p="3"><img src="media/soundsplit-pricing.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit Go Premium screen: Basic 50 minutes for $15, Standard 150 minutes for $35, Premium 800 minutes for $120, one-time fees" /><figcaption><b>Pay:</b> three blocks of minutes, one-time fees.</figcaption></figure>
       <figure data-p="4"><img src="media/soundsplit-balance.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit balance screen: minutes left on a timer, an Add Minutes button, and a history of songs processed" /><figcaption><b>Meter:</b> minutes left, and what each song used.</figcaption></figure>
-      <figure class="award-card"><img src="assets/photos/Future-star-award-soundsplit.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="The Future Star Award slide for SoundSplit projected in a hall, listing the team" /><figcaption>The DFW IT Association’s Future Star Award, as it was announced.</figcaption></figure>
     </div>
 
     <div class="grid2" style="margin-top:clamp(56px,7vw,100px)">
@@ -998,7 +1002,8 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
     </div>
   </div>
 
-  <div class="wrap"><div class="team" data-r><span class="mono">Team</span><div><p>Vaibhav Sykhesh, Raymond Zhou, Bradley Chen, Mihir Kumar and me.</p><p>SoundSplit and Dermat AI are published through a family member’s company developer account, APIDEED LLC.</p></div></div></div>
+  <div class="wrap"><div class="team" data-r><span class="mono">Team</span><div><p>Vaibhav Sykhesh, Raymond Zhou, Bradley Chen, Mihir Kumar and me.</p><p>SoundSplit and Dermat AI are published through a family member’s company developer account, APIDEED LLC.</p></div></div>
+    <div class="team awardline" data-r><span class="mono">Award</span><div class="aw"><img src="assets/photos/Future-star-award-soundsplit.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="The Future Star Award slide for SoundSplit, projected in a hall, listing the team" /><p>Future Star Award, DFW IT Association, 2024–25, as it was announced.</p></div></div></div>
 </section>
 
 <!-- ================= 06 TUTORING ================= -->
