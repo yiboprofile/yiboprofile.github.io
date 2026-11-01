@@ -537,6 +537,23 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .cdG{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,64px);align-items:start;margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
 .cdG .hh-lede{margin-top:0}.cdG .hh-foot{margin-top:22px}
 @media (max-width:860px){.cdG{grid-template-columns:1fr}.tests-g{grid-template-columns:1fr 1fr}.tests-h{display:none}.hh-facts .lnk{margin-left:0}}
+/* 06: the result first, then the reason and the three numbers */
+#tutoring .h2{font-size:clamp(36px,3.8vw,60px)}
+#tutoring .pname{font-size:clamp(20px,1.8vw,28px)}
+.hh-lede{max-width:72ch;font-size:16.5px;line-height:1.55}
+.kvline{margin:18px 0 0;font-size:15px;color:var(--ink-2)}.kvline b{font-family:var(--serif);font-weight:400;font-size:30px;margin-right:8px;vertical-align:-2px}
+/* D */
+.tD{display:grid;grid-template-columns:minmax(0,.52fr) minmax(0,.48fr);gap:clamp(28px,4.5vw,80px);align-items:start;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.tD-hero>.mono{display:block;margin-bottom:14px}
+.tD-big{margin:0;font-family:var(--serif);font-size:clamp(64px,7vw,120px);line-height:.9;letter-spacing:-.03em;color:var(--ink);display:flex;align-items:baseline;gap:.18em;white-space:nowrap}
+.tD-big .from{color:var(--ink-3)}.tD-big .ar{color:var(--ink-4);font-size:.5em}.tD-big b{font-weight:400;color:var(--amber)}
+.tD-sub{margin:14px 0 26px;font-size:15.5px;color:var(--ink-2)}.tD-sub b{font-family:var(--serif);font-weight:400;font-size:26px;margin-right:6px;vertical-align:-1px}
+.tD-hero .scale{margin-top:34px}
+.tD-text .hh-lede{margin-top:4px}
+.tD-facts{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line)}
+.tD-facts li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink-2)}
+.tD-facts b{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1;color:var(--ink);white-space:nowrap}.tD-facts b.amber{color:var(--amber)}
+@media (max-width:860px){.tD{grid-template-columns:1fr}.tD-big{font-size:56px}}
 /* 05 + 06: facts as one strip, the argument on one screen */
 .hh-facts{list-style:none;margin:18px 0 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 36px;align-items:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
 .hh-facts li{display:flex;align-items:baseline;gap:12px}
@@ -1037,13 +1054,22 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="tu-h" data-r>Families pay for a result. <span class="soft">The one that sold.</span></h2>
       <p class="pname" data-r>Urbana SAT Tutoring. <em>Paid for by results.</em></p>
     </div>
-    <div class="facts tuB" style="--n:3" data-r>
-      <div><span class="mono muted">Price</span><span class="v amber tnum">$37</span><span class="s">a session; the usual rate is $70–90</span><div class="scale"><div class="rail"><span class="seg" style="left:0;width:37%;background:var(--amber)"></span><span class="lab amber" style="left:37%">$37</span><span class="seg" style="left:70%;width:20%;background:repeating-linear-gradient(135deg,rgba(244,237,227,.55) 0 2px,transparent 2px 6px);border:1px solid var(--ink-3)"></span><span class="lab" style="left:80%">$70–90</span></div><div class="ticks"><span>$0</span><span>$50</span><span>$100</span></div></div></div>
-      <div><span class="mono muted">Clients</span><span class="v tnum">10+</span><span class="s">each with a weekly and a monthly plan</span><div class="cdots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="h"></i><i class="h"></i><i class="h"></i></div><span class="s">Filled: clients. Hollow: the three tutors we hired.</span></div>
-      <div><span class="mono muted">Best gain</span><span class="v tnum">+280</span><span class="s">1230 to 1510, on the 400–1600 scale</span><div class="scale"><div class="rail"><span class="seg" style="left:69.17%;width:23.33%;background:linear-gradient(90deg,rgba(244,237,227,.25),var(--amber))"></span><span class="mk" style="left:69.17%;background:var(--ink-2)"></span><span class="mk" style="left:92.5%;background:var(--amber)"></span><span class="lab" style="left:67%;color:var(--ink-2)">1230</span><span class="lab amber" style="left:92.5%">1510</span></div><div class="ticks"><span>400</span><span>1000</span><span>1600</span></div></div></div>
+    <div class="tD">
+      <div class="tD-hero" data-r>
+        <span class="mono muted">The largest gain so far</span>
+        <p class="tD-big"><span class="from">1230</span><span class="ar" aria-hidden="true">→</span><b>1510</b></p>
+        <p class="tD-sub"><b class="amber">+280</b> points on the SAT’s 400–1600 scale, for one of our first students.</p>
+        <div class="scale"><div class="rail"><span class="seg" style="left:69.17%;width:23.33%;background:linear-gradient(90deg,rgba(244,237,227,.25),var(--amber))"></span><span class="mk" style="left:69.17%;background:var(--ink-2)"></span><span class="mk" style="left:92.5%;background:var(--amber)"></span><span class="lab" style="left:67%;color:var(--ink-2)">1230</span><span class="lab amber" style="left:92.5%">1510</span></div><div class="ticks"><span>400</span><span>1000</span><span>1600</span></div></div>
+      </div>
+      <div class="tD-text">
+        <p class="lede hh-lede" data-r>I co-founded a one-on-one SAT tutoring business in Urbana. We charge $37 a session; others usually charge $70 to $90. The session is not what a family is paying for, though: every student gets a weekly and a monthly plan, and we priced the hour low so the plan is what they judge us on. We had more than ten clients, more than the founders could teach, so we hired three tutors.</p>
+        <ul class="tD-facts" data-r>
+          <li><b class="amber">$37</b><span>a session; the usual rate is $70–90</span></li>
+          <li><b>10+</b><span>clients, each with a weekly and a monthly plan</span></li>
+          <li><b>2 + 3</b><span>founders who tutor, and tutors hired as it grew</span></li>
+        </ul>
+      </div>
     </div>
-    <p class="lede hh-lede" data-r>I co-founded a one-on-one SAT tutoring business in Urbana. We charge $37 a session; others usually charge $70 to $90. The session is not what a family is paying for, though: every student gets a weekly and a monthly plan, and we priced the hour low so the plan is what they judge us on. We had more than ten clients, more than the founders could teach, so we hired three tutors.</p>
-    <div class="hh-foot one" data-r><div><span class="mono">Team</span><p>Two founders who tutor, and three tutors hired once we could not take more students.</p></div></div>
   </div>
 </section>
 
