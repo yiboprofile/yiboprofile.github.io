@@ -503,7 +503,13 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .argued-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px clamp(28px,4vw,64px);margin-top:18px}
 .argued h3{margin:0 0 10px;font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.2;color:var(--ink)}
 .argued p{margin:0;font-size:16.5px;line-height:1.55;color:var(--ink-3)}
-#about .also{margin-top:clamp(24px,3vw,40px);border-top:1px solid var(--line);padding-top:22px}
+/* the one thing on the page that was not built: a short line and a calm, wide photo */
+.swim{margin-top:clamp(24px,3vw,40px);border-top:1px solid var(--line);padding-top:clamp(20px,2.4vw,32px);display:grid;grid-template-columns:minmax(0,.38fr) minmax(0,.62fr);gap:clamp(24px,4vw,64px);align-items:end}
+.swim-t .mono{display:block;color:var(--ink-3);margin-bottom:12px}
+.swim-t p{margin:0;font-family:var(--serif);font-size:clamp(20px,1.5vw,24px);line-height:1.3;color:var(--ink);max-width:18ch}
+.swim-f{margin:0}
+.swim-f img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 55%;border-radius:4px;filter:saturate(.62) contrast(1.04) brightness(.92)}
+@media (max-width:860px){.swim{grid-template-columns:1fr;gap:16px}.swim-f{order:-1}.swim-t p{max-width:none;font-size:19px}}
 .order{margin:22px 0 clamp(20px,2.4vw,32px);color:var(--ink-4);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.9}
 @media (max-width:860px){.argued-g{grid-template-columns:1fr}}
 #about .grid2{margin-top:12px}
@@ -1165,7 +1171,10 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
         </div>
       </div>
     </div>
-    <div class="also" data-r><span class="mono">Not built</span><p>A competitive swimmer for twelve years, four of them on Urbana’s varsity team.</p></div>
+    <div class="swim" data-r>
+      <div class="swim-t"><span class="mono">Not built</span><p>A competitive swimmer for twelve years, four of them on Urbana’s varsity team.</p></div>
+      <figure class="swim-f"><img src="assets/photos/swim.webp" width="800" height="532" loading="lazy" decoding="async" alt="Yibo mid-stroke in freestyle, between two lane ropes" /></figure>
+    </div>
     <p class="order mono" data-r>Built, in order: HolidayHelperAI, 2023 · SoundSplit, 2024 · Crave Deals and Dermat AI, 2025 · the talk, 2026</p>
   </div>
 
