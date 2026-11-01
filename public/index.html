@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="robots" content="noindex, nofollow, noarchive" />
 <title>Yibo Wang · Every market starts with someone going first.</title>
-<meta name="description" content="Every market starts with someone going first. Yibo Wang on the people who joined, and why some products sell." />
+<meta name="description" content="Every market starts with someone going first. Yibo Wang on why he builds, who pays for what, and what he still wants to know." />
 <meta name="theme-color" content="#110f0d" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <meta name="theme-color" content="#110f0d" />
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Yibo Wang" />
 <meta property="og:title" content="Yibo Wang · Every market starts with someone going first." />
-<meta property="og:description" content="Before a product has customers or a club has members, one person has to decide it’s worth their time, money or trust. I want to understand that decision." />
+<meta property="og:description" content="Every product, club and business on this page began with one person deciding it was worth their time, money or trust before anyone else had. I build things to find out what makes someone go first." />
 <meta property="og:url" content="https://yiboprofile.github.io/" />
 <meta property="og:image" content="https://yiboprofile.github.io/og-vision.jpg" />
 <meta property="og:image:width" content="1200" />
@@ -110,7 +110,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
 
 /* index */
 .index{padding-top:clamp(28px,3vw,44px)}
-.index ol{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));margin-top:14px;border-top:1px solid var(--line)}
+.index ol{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));margin-top:14px;border-top:1px solid var(--line)}
 .index li+li{border-left:1px solid var(--line)}
 .index a{display:flex;flex-direction:column;gap:3px;padding:16px 14px 18px;text-decoration:none;min-height:44px;transition:background .25s}
 .index li:first-child a{padding-left:0}
@@ -568,6 +568,28 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .hero-sound:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 .hero-sound .on{display:none}.hero-sound.playing .on{display:inline}.hero-sound.playing .off{display:none}
 @media (max-width:379px){.hero-sound{min-width:44px;justify-content:center}.hero-sound span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);padding:0;border:0}.hero-sound svg{margin-bottom:0}}
+/* his own words before the thesis */
+.hero .said{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.5vw,23px);line-height:1.35;color:var(--ink-2);max-width:40rem;margin-bottom:clamp(14px,1.8vw,22px)}
+.hero .said .who{display:block;margin-top:8px;font-family:var(--mono);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.hero .vision{max-width:44rem}
+.hero .row2{display:flex;align-items:center;flex-wrap:wrap;gap:12px 28px;margin:clamp(24px,3.5vh,44px) 0 clamp(28px,5vh,56px)}
+.hero .row2 .cue{margin:0}
+.hero .row2 .stage-chip{margin:0;align-self:auto}
+@media (max-width:860px){.hero .said{font-size:15px;max-width:none}.hero .row2{gap:10px 18px;margin:18px 0 26px}.hero .row2 .stage-chip{display:none}}
+/* why I build */
+.why{padding-top:clamp(44px,5vw,76px)}
+.why .text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);margin-top:clamp(22px,2.4vw,34px)}
+.why .text p{font-size:17px;line-height:1.65;color:var(--ink-2);margin:0 0 16px}
+.why .text p:last-child{margin-bottom:0}
+.why .text em{font-style:normal;color:var(--ink)}
+@media (max-width:860px){.why .text{grid-template-columns:1fr}.why .text p{font-size:16px}}
+/* open questions */
+.ask{margin-top:clamp(24px,3vw,40px);border-top:1px solid var(--line);padding-top:clamp(20px,2.4vw,32px)}
+.ask ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 44px;counter-reset:q}
+.ask li{counter-increment:q;font-size:16.5px;line-height:1.5;color:var(--ink-3);padding-left:34px;position:relative}
+.ask li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:3px;font-family:var(--mono);font-size:11px;color:var(--amber)}
+.ask li b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.2;color:var(--ink);margin-bottom:6px}
+@media (max-width:860px){.ask ol{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -598,11 +620,30 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
     </video>
   </div>
   <div class="hero-in" id="heroIn">
-    <a class="stage-chip" href="https://www.youtube.com/watch?v=PbbQxn38bcQ" target="_blank" rel="noopener" data-h style="--d:.15s"><i aria-hidden="true"></i>TEDxSCA Youth, 2026 · Watch the talk</a>
+    <p class="said" data-h style="--d:.15s">“Maybe Gen Z is cooked, but I don’t think so, and I’m not willing to find out by doing absolutely nothing.”<span class="who">The end of my TEDx talk, 2026</span></p>
     <h1 class="h1"><span class="l" data-h style="--d:.3s">Every market starts</span><span class="l l2" data-h style="--d:.46s">with someone going first.</span></h1>
-    <p class="vision" data-h style="--d:.7s">Before a product has customers or a club has members, one person has to decide it’s worth their time, money or trust. I want to understand that decision, and to build things that earn it.</p>
-    <a class="cue" href="#people" data-h style="--d:.95s">Start with one person <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M8 2v11M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
-    <button class="hero-sound" id="heroSound" type="button" data-h style="--d:1.1s"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" aria-hidden="true"><path d="M2 6v4h2.6L8 13V3L4.6 6z" fill="currentColor"/><path class="on" d="M10.5 5.5a3.5 3.5 0 0 1 0 5M12.3 3.7a6 6 0 0 1 0 8.600" stroke="currentColor" stroke-width="1.3"/><path class="off" d="M10.5 6.200l3.600 3.600M14.100 6.200l-3.600 3.600" stroke="currentColor" stroke-width="1.3"/></svg><span id="heroSoundLabel">Play sound</span></button>
+    <p class="vision" data-h style="--d:.7s">Every product, club and business on this page began with one person deciding it was worth their time, money or trust before anyone else had. I build things to find out what makes someone go first.</p>
+    <div class="row2" data-h style="--d:.95s">
+      <a class="cue" href="#why">Why I build <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M8 2v11M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      <a class="stage-chip" href="https://www.youtube.com/watch?v=PbbQxn38bcQ" target="_blank" rel="noopener"><i aria-hidden="true"></i>TEDxSCA Youth · Watch the talk</a>
+    </div>
+    <button class="hero-sound" id="heroSound" type="button" data-h style="--d:1.1s"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" aria-hidden="true"><path d="M2 6v4h2.6L8 13V3L4.6 6z" fill="currentColor"/><path class="on" d="M10.5 5.5a3.5 3.5 0 0 1 0 5M12.3 3.7a6 6 0 0 1 0 8.600" stroke="currentColor" stroke-width="1.3"/><path class="off" d="M10.5 6.200l3.600 3.600M14.100 6.200l-3.600 3.600" stroke="currentColor" stroke-width="1.3"/></svg><span id="heroSoundLabel">Hear it · 12 s</span></button>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="why wrap" id="why" aria-labelledby="why-h">
+  <p class="eyebrow mono" data-r><b>00</b><i></i>Why I build</p>
+  <h2 class="h2 one-line" id="why-h" data-r>A price is a promise.</h2>
+  <div class="text">
+    <div>
+      <p data-r>I used to wait until I was sure before I went first. In ninth grade I put a price on something I had made for the first time: $2 a month for a trip planner. More than ten people paid for it, and I still don’t fully know what made the first one decide. That question is behind everything on this page.</p>
+      <p data-r style="--d:.08s">Every product here is a different promise to a stranger. <em>Dermat AI</em> costs nothing, so every answer says it is not a diagnosis. <em>SoundSplit</em> charges by the minute, because every minute costs me money and under a subscription the heaviest users would cost more than they paid. <em>Our tutoring</em> charges $37 a session, half the going rate, and families pay for a result. <em>Crave Deals</em> takes a commission only on diners we actually bring in, so a restaurant we bring no one to owes us nothing. The numbers under each one are whether I kept the promise.</p>
+    </div>
+    <div>
+      <p data-r style="--d:.12s">Economics, as I have met it so far, studies what happens after millions of people have decided: months of FOMC press conferences at the Economics Challenge, a Chipotle case at Wharton. I want to study the first decision, the one a person makes before there is any data. My products gave me the questions. I don’t yet have the tools.</p>
+      <p data-r style="--d:.2s">What I won’t do: hide a number because it is small, charge a restaurant for diners we didn’t bring, or let someone who paid nothing mistake an answer for a diagnosis. Zero restaurants have signed with Crave Deals so far. That is on this page too.</p>
+    </div>
   </div>
 </section>
 
@@ -611,12 +652,13 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
   <p class="mono muted">The questions in this story</p>
   <ol>
     <li><a href="#people"><span class="ix">01</span><b>People</b><em>Who goes first?</em></a></li>
+    <li><a href="#pricing"><span class="ix">02</span><b>Who pays</b><em>What is a price a promise of?</em></a></li>
     <li><a href="#dermat"><span class="ix">03</span><b>Dermat AI</b><em>What does free say about trust?</em></a></li>
     <li><a href="#holidayhelperai"><span class="ix">04</span><b>HolidayHelperAI</b><em>How do you price something new?</em></a></li>
     <li><a href="#soundsplit"><span class="ix">05</span><b>SoundSplit</b><em>Who should pay for heavy use?</em></a></li>
     <li><a href="#tutoring"><span class="ix">06</span><b>SAT Tutoring</b><em>What is a result worth?</em></a></li>
     <li><a href="#cravedeals"><span class="ix">07</span><b>Crave Deals</b><em>What if you’re paid only when it works?</em></a></li>
-    <li><a href="#about"><span class="ix">08</span><b>About</b><em>Why economics?</em></a></li>
+    <li><a href="#about"><span class="ix">08</span><b>About</b><em>What I still want to know</em></a></li>
   </ol>
 </nav>
 
@@ -624,13 +666,13 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 <section id="people" data-chapter="People" aria-labelledby="people-h">
   <div class="room" id="room">
     <div>
-      <div class="room-phase" aria-hidden="true"><span data-ph="0">One</span><span data-ph="1">~150</span><span data-ph="2" class="on">~400</span></div>
-      <p class="room-count" id="roomCount" aria-hidden="true"><span class="t">~</span>400</p>
-      <p class="room-label" id="roomLabel">…to ~400. Members of the Urbana FBLA chapter.</p>
-      <p class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">~400 members of the Urbana FBLA chapter, up from about 150.</p>
+      <div class="room-phase" aria-hidden="true"><span data-ph="0">One</span><span data-ph="1">107</span><span data-ph="2" class="on">455+</span></div>
+      <p class="room-count" id="roomCount" aria-hidden="true">455<span class="t">+</span></p>
+      <p class="room-label" id="roomLabel">…to 455 and counting. Members of the Urbana FBLA chapter.</p>
+      <p class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">455 or more members of the Urbana FBLA chapter, up from 107.</p>
     </div>
     <div>
-      <canvas class="room-canvas" id="roomCanvas" role="img" aria-label="400 dots, one per member of the Urbana FBLA chapter; about 150 were members before and the rest joined since."></canvas>
+      <canvas class="room-canvas" id="roomCanvas" role="img" aria-label="455 dots, one per member of the Urbana FBLA chapter; 107 were members before and the rest joined since."></canvas>
       <div class="room-foot mono"><span>One dot, one person</span><span id="roomTally">Urbana FBLA</span></div>
     </div>
   </div>
@@ -647,13 +689,13 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
         <div><dt class="mono">Team lead</dt><dd>Urbana FBLA chapter, 2025–26</dd></div>
         <div><dt class="mono">Vice president</dt><dd>Urbana FBLA chapter, 2026–27</dd></div>
         <div><dt class="mono">State council</dt><dd>One of six on the Maryland state council</dd></div>
-        <div><dt class="mono">Nationals</dt><dd>More than 60 members went, the 8th largest chapter there</dd></div>
+        <div><dt class="mono">Nationals</dt><dd>50+ members went; Champion Chapter gold status</dd></div>
       </dl>
     </div>
   </div>
 
   <figure class="bleed" style="margin-top:clamp(28px,3vw,44px)">
-    <img id="fblaImg" src="media/fbla-nlc-2026.webp" width="1860" height="519" loading="lazy" decoding="async" alt="About sixty members of the Urbana FBLA chapter in matching orange shirts and conference badges, standing together in a convention center hall" />
+    <img id="fblaImg" src="media/fbla-nlc-2026.webp" width="1860" height="519" loading="lazy" decoding="async" alt="Members of the Urbana FBLA chapter in matching orange shirts and conference badges, standing together in a convention center hall" />
   </figure>
   <p class="bleed-cap">Our chapter at the FBLA National Leadership Conference, 2026.</p>
 
@@ -661,19 +703,19 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
     <p class="mono muted" style="margin-top:clamp(28px,3vw,40px)" data-r>One dot, one person</p>
     <ul class="groups">
       <li data-r>
-        <div><h3>Computer Science Club</h3><div class="dots" data-dots="35:a,55:b" aria-hidden="true"></div></div>
-        <p class="gv tnum">35 → 90+</p>
-        <p>35 members when I became co-president, 90+ now. Nearly 30 entered USACO, MITIT and CALICO.</p>
+        <div><h3>Computer Science Club</h3><div class="dots" data-dots="35:a,70:b" aria-hidden="true"></div></div>
+        <p class="gv tnum">35 → 105</p>
+        <p>35 members when I became co-president, 105 now. About 30 entered MITIT, CALICO and USACO, and most of our teams placed in the top 30%.</p>
       </li>
       <li data-r>
         <div><h3>SCISS startup program</h3><div class="dots" data-dots="50:a" aria-hidden="true"></div></div>
         <p class="gv tnum">50+</p>
-        <p>Participants in the two-week program where I was a student counselor, while competing in it. My team won Best Presentation and Best Team.</p>
+        <p>Participants in the two-week program where I was a student counselor while competing in it. My team’s concept was a water-based AI data center; I led the final pitch, and we won Best Presentation and Best Team.</p>
       </li>
       <li data-r>
         <div><h3>DreamCollegeAI</h3><div class="dots" data-dots="35:a,5:h" aria-hidden="true"></div></div>
         <p class="gv tnum">35–40</p>
-        <p>In grade 10 I managed 35–40 interns in marketing, quality control and software. Our posts got close to 300K views.</p>
+        <p>In grade 10 I managed 35–40 interns in marketing, quality control and software. The content we made drew 300K+ views and impressions.</p>
       </li>
       <li data-r>
         <div><h3>Urbana SAT Tutoring</h3><div class="dots" data-dots="10:a" aria-hidden="true"></div></div>
@@ -681,7 +723,7 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
         <p>Clients so far. We hired three tutors as it grew.</p>
       </li>
     </ul>
-    <div class="also" data-r><span class="mono">Also</span><p>Co-president of Students Demand Action, chosen by the outgoing officers; joined a Capitol advocacy visit for a gun-related bill that later passed.</p></div>
+    <div class="also" data-r><span class="mono">Also</span><p>Co-president of Students Demand Action, chosen by the outgoing officers: meetings and recruitment for 30+ members, and advocacy in Annapolis for a Maryland bill (HB 577 / SB 344) that later passed.</p></div>
   </div>
 </section>
 
@@ -743,11 +785,10 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="dermat-h" data-r>A skin check is a trust good. <span class="soft">What does $0 say?</span></h2>
       <p class="pname" data-r>Dermat AI. <em>No price at all.</em></p>
     </div>
-    <div class="facts" style="--n:4" data-r>
+    <div class="facts" style="--n:3" data-r>
       <div><span class="mono muted">Price</span><span class="v amber">$0</span><span class="s">nothing to buy inside</span></div>
       <div><span class="mono muted">Downloads</span><span class="v tnum">1,996</span><span class="s">811 App Store, 1,185 Google Play, in 15 months</span></div>
       <div><span class="mono muted">Still installed</span><span class="v tnum">~117</span><span class="s">Android devices now; peak 221</span></div>
-      <div><span class="mono muted">Award</span><span class="v sm">Emerging Standout</span><span class="s">DFW IT Talent Champion, 2025–26</span></div>
     </div>
     <div class="intro">
       <p class="lede" data-r>An iPhone and Android app for looking after your skin. You scan a photo and it shows what it may be and how sure the model is. There’s also a skin diary, a routine built for your skin and an AI assistant you can ask at any hour. It’s free, with nothing to buy inside.</p>
@@ -813,11 +854,10 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="hh-h" data-r>I set the prices. <span class="soft">More than ten people paid.</span></h2>
       <p class="pname" data-r>HolidayHelperAI. <em>Three tiers.</em></p>
     </div>
-    <div class="facts" style="--n:4" data-r>
+    <div class="facts" style="--n:3" data-r>
       <div><span class="mono muted">Built</span><span class="v tnum">2023–24</span><span class="s">grade 9, still online</span></div>
       <div><span class="mono muted">Price</span><span class="v amber tnum">$2–$8.99</span><span class="s">a month, three tiers</span></div>
       <div><span class="mono muted">Paid</span><span class="v tnum">10+</span><span class="s">people</span></div>
-      <div><span class="mono muted">Award</span><span class="v sm">Stellar Young Achiever</span><span class="s">DCIA, 2023–24</span></div>
     </div>
     <div class="intro">
       <p class="lede" data-r>A website for planning trips, with an AI assistant, travel plans, an inspiration board and a journal. I led the team of five that built it in ninth grade, and I set the prices. More than ten people have paid for it.</p>
@@ -853,7 +893,7 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
     </div>
     <div class="grid2 same-h" style="margin-top:12px;align-items:start">
       <figure data-r><div class="photo"><img class="zoom" src="media/hhai-pricing.webp" width="1280" height="980" loading="lazy" decoding="async" alt="The HolidayHelperAI pricing page: Standard $2 a month or $20 a year, Premium $4 or $40, Enterprise $8.99 or $80.99" /></div><figcaption class="cap">holidayhelperai.com/pricing, October 2026.</figcaption></figure>
-      <figure data-r style="--d:.08s"><div class="photo"><img class="zoom" src="assets/photos/award-holidayhelper.webp" width="1386" height="782" loading="lazy" decoding="async" alt="The DCIA Stellar Young Achiever Award slide for HolidayHelperAI, naming Yibo Wang as team leader" /></div><figcaption class="cap">The DCIA award slide, with the team listed.</figcaption></figure>
+      <figure data-r style="--d:.08s"><div class="photo"><img class="zoom" src="assets/photos/award-holidayhelper.webp" width="1386" height="782" loading="lazy" decoding="async" alt="The DCIA Stellar Young Achiever Award slide for HolidayHelperAI, naming Alan Wang as team leader" /></div><figcaption class="cap">The Stellar Young Achiever award slide from DCIA, the DFW IT Association, 2023–24, with the team listed.</figcaption></figure>
     </div>
     <div class="team" data-r><span class="mono">Team</span><p>I led it, with William Liu, Raymond Zhou, Owen Liu and Hanna Lee, and James Wang as advisor.</p></div>
   </div>
@@ -868,11 +908,10 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="ss-h" data-r>Free to download. <span class="soft">Every minute has a cost.</span></h2>
       <p class="pname" data-r>SoundSplit. <em>Sold by the minute.</em></p>
     </div>
-    <div class="facts" style="--n:4" data-r>
+    <div class="facts" style="--n:3" data-r>
       <div><span class="mono muted">Downloads</span><span class="v tnum">854</span><span class="s">606 App Store, 248 Google Play, in 27 months</span></div>
       <div><span class="mono muted">Price</span><span class="v sm amber tnum">$14.99–$119.99</span><span class="s">a block of minutes; free to download</span></div>
       <div><span class="mono muted">Bought minutes</span><span class="v tnum">9</span><span class="s">people, about 1 in 95 downloads; $404.91 spent</span></div>
-      <div><span class="mono muted">Award</span><span class="v sm">Future Star</span><span class="s">DFW IT Association, 2024–25</span></div>
     </div>
     <div class="intro">
       <p class="lede" data-r>An iPhone and Android app that splits a song into its stems, so you can take out the vocals for karaoke or mute the piano to practise along. I charge by the minute because every minute processed costs me money. With a subscription, the heaviest users would cost more than they paid.</p>
@@ -1081,7 +1120,16 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="ab-h" data-r>Economics, <span class="soft">without an app.</span></h2>
     </div>
     <div class="intro">
-      <p class="lede" data-r>Urbana High School, Frederick, Maryland · Class of 2027. Economics is what I want to study, and my products are where I try out what I learn.</p>
+      <p class="lede" data-r>Yibo (Alan) Wang. Urbana High School, Frederick, Maryland, Class of 2027. Economics is what I want to study. My products gave me questions I can’t answer with the data I have; these are the ones I’d bring with me.</p>
+    </div>
+    <div class="ask" data-r>
+      <ol>
+        <li><b>Which side of a two-sided market has to go first?</b>Diners won’t come to Crave Deals without deals, and restaurants won’t post deals without diners. Forty pitches have asked the restaurant to go first.</li>
+        <li><b>Does $0 raise trust, or lower it?</b>Dermat AI is free and people trust it anyway. 35% of its Android installs are in India, and I don’t know what a free skin check means where a dermatologist is far away.</li>
+        <li><b>Does a price that tracks my cost change how people use a thing?</b>SoundSplit’s two Premium buyers bought 71% of all the minutes, at my lowest price per minute.</li>
+        <li><b>What are families paying for, the price or the plan?</b>Every tutoring client got both at $37 a session, so I can’t separate them yet.</li>
+        <li><b>Does the first decision look the same at the Fed’s scale?</b>At the Economics Challenge I spent months on FOMC press conferences and argued policy as Keir Starmer. I could see the aggregate, and not one person in it.</li>
+      </ol>
     </div>
 
     <div class="bento" data-r>
@@ -1090,7 +1138,7 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
         <div class="tile y2023"><h3 class="ty">2023</h3><ul><li class="b"><b>HolidayHelperAI</b><span>Led a team of five, grade 9.</span></li></ul></div>
         <div class="tile y2024"><h3 class="ty">2024</h3><ul><li class="b"><b>SoundSplit</b><span>On the App Store, August.</span></li></ul></div>
         <div class="tile y2025"><h3 class="ty">2025</h3><ul><li class="b"><b>Crave Deals</b><span>The business plan.</span></li><li class="b"><b>Dermat AI</b><span>On the App Store, August.</span></li><li class="s"><b>FBLA, 3rd in the nation</b><span>Business Plan Event, after 3rd in Maryland.</span></li></ul></div>
-        <div class="tile y2026"><h3 class="ty">2026</h3><ul><li class="s"><b>Economics Challenge, 1st (state)</b><span>One of six chosen from just under 100.</span></li><li class="s"><b>Wharton LBW</b><span>One of just over 100 accepted to session one.</span></li><li class="s"><b>TEDxSCA Youth</b><span>A talk: Is Gen-Z Cooked?</span></li><li class="s"><b>SCISS startup program</b><span>Best Presentation and Best Team.</span></li><li class="s"><b>National Merit Semifinalist</b></li></ul></div>
+        <div class="tile y2026"><h3 class="ty">2026</h3><ul><li class="s"><b>Economics Challenge, 1st (state)</b><span>One of six chosen from about 100.</span></li><li class="s"><b>Wharton LBW</b><span>One of about 100 accepted to session one.</span></li><li class="s"><b>TEDxSCA Youth</b><span>A talk: Is Gen-Z Cooked?</span></li><li class="s"><b>SCISS startup program</b><span>Best Presentation and Best Team.</span></li><li class="s"><b>National Merit Semifinalist</b></li></ul></div>
       </div>
     </div>
 
@@ -1101,9 +1149,10 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       </div>
       <div class="panel" data-r style="--d:.08s">
         <span class="mono">Wharton, Leadership in the Business World</span>
-        <p style="font-size:15.5px;color:var(--ink-2)">One of just over 100 students accepted to session one. Three weeks of Harvard Business School cases with Wharton faculty; my team built and presented a full case on Chipotle’s expansion into Asia.</p>
+        <p style="font-size:15.5px;color:var(--ink-2)">One of about 100 students accepted to session one. Three weeks of Harvard Business School cases with Wharton faculty; my team built and presented a full case on Chipotle’s expansion into Asia.</p>
       </div>
     </div>
+    <div class="also" data-r><span class="mono">Also</span><p>A competitive swimmer for twelve years, four of them on Urbana’s varsity team. In grade 9, a Human Resources intern at Frederick County Public Schools, digitizing records and seeing hiring and onboarding from the inside.</p></div>
   </div>
 
   <div class="wrap"><div class="tedx2" data-r>
@@ -1111,7 +1160,7 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
     <div class="tx">
       <p class="mono muted">TEDxSCA Youth, 2026.</p>
       <h3>“Is Gen-Z Cooked?”</h3>
-      <p class="lede">“Is Gen-Z Cooked?”, to an audience of 100. Published on the official TEDx Talks channel on October 19, 2026, with 610 views by the end of the month.</p>
+      <p class="lede">“Is Gen-Z Cooked?”, to an audience of 100. Published on October 19, 2026 on the official TED website and the TEDx Talks YouTube channel.</p>
       <p class="lede" style="color:var(--ink)">People ask that question about my generation a lot. My answer was no. Gen Z has more tools than any generation before it for turning an idea into something real, and that gives us a chance and a responsibility to build the future we say we want.</p>
       <p class="go"><a class="btn fill" href="https://www.youtube.com/watch?v=PbbQxn38bcQ" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg> Watch the talk</a></p>
     </div>
@@ -1120,9 +1169,9 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 </main>
 
 <footer>
-  <p>Yibo Wang · Urbana High School · Frederick, Maryland · Class of 2027</p>
+  <p>Yibo (Alan) Wang · Urbana High School · Frederick, Maryland · Class of 2027</p>
   <p>Product screenshots as published, October 2026. TEDxSCA Youth photographs by Dong Ho.</p>
-  <p>Content and data by Yibo Wang; analysis, site design and build with Claude Code, using skills including MotionSites Web Builder and Humanizer.</p>
+  <p>Content and data by Yibo Wang; analysis, editing, design and build with Claude Code.</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -1145,7 +1194,7 @@ if (v) { v.muted = true; v.defaultMuted = true; v.setAttribute('muted','');
   var LOOP = 'media/tedx-closing.mp4', SOUND = 'media/tedx-closing-sound.mp4', on = false;
   function quiet(){
     if (!on) return;
-    on = false; b.classList.remove('playing'); l.textContent = 'Play sound';
+    on = false; b.classList.remove('playing'); l.textContent = 'Hear it · 12 s';
     v.muted = true; v.loop = true; v.src = LOOP;
     if (RM) { v.load(); return; }
     var p = v.play(); if (p && p.catch) p.catch(function(){});
@@ -1260,8 +1309,8 @@ addEventListener('scroll',onScroll,{passive:true}); onScroll();
 /* ---------- THE ROOM: 400 dots ---------- */
 var cv=document.getElementById('roomCanvas'), ctx=cv.getContext('2d');
 var countEl=document.getElementById('roomCount'), labelEl=document.getElementById('roomLabel'), phases=document.querySelectorAll('.room-phase span');
-var TOTAL=400, BEFORE=150, shown=-1;
-function layout(){ var mob=innerWidth<=860; return mob?{c:16,r:25}:{c:25,r:16}; }
+var TOTAL=455, BEFORE=107, shown=-1;
+function layout(){ var mob=innerWidth<=860; return mob?{c:19,r:24}:{c:24,r:19}; }
 function draw(n){
   var L=layout(), w=cv.clientWidth, h=cv.clientHeight, dpr=Math.min(devicePixelRatio||1,2);
   if(cv.width!==Math.round(w*dpr)||cv.height!==Math.round(h*dpr)){cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);}
@@ -1284,8 +1333,8 @@ function setRoom(p){ /* p: 0..1 scroll progress */
   else { n=TOTAL; ph=2; }
   if(n===shown) return; shown=n;
   if(n===1){ txt='1'; label='Every room starts with one person.'; }
-  else if(n===BEFORE){ txt='<span class="t">~</span>150'; label='From about 150 members…'; }
-  else if(n===TOTAL){ txt='<span class="t">~</span>400'; label='…to ~400. Members of the Urbana FBLA chapter.'; }
+  else if(n===BEFORE){ txt='107'; label='From 107 members…'; }
+  else if(n===TOTAL){ txt='455<span class="t">+</span>'; label='…to 455 and counting. Members of the Urbana FBLA chapter.'; }
   else { txt=String(n); label= n<BEFORE ? 'First one person. Then the room.' : 'Then the room.'; }
   countEl.innerHTML=txt; labelEl.textContent=label;
   phases.forEach(function(s,i){ s.classList.toggle('on', i===ph); });
