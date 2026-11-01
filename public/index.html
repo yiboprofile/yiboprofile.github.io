@@ -507,6 +507,35 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .tc-year b{color:var(--ink);font-weight:600}
 .tc-year .months i{height:16px}
 @media (max-width:860px){.hhC{grid-template-columns:1fr}.tiercard{grid-template-columns:1fr}.tc-col+.tc-col{border-left:0;border-top:1px solid var(--line)}.hh-foot{grid-template-columns:1fr}.vfacts{gap:0 18px}}
+/* 05 + 06: facts as one strip, the argument on one screen */
+.hh-facts{list-style:none;margin:18px 0 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 36px;align-items:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.hh-facts li{display:flex;align-items:baseline;gap:12px}
+@media (max-width:860px){.hh-facts{gap:12px 24px}.hh-facts li{flex-wrap:wrap;width:100%}.hh-facts li span{min-width:92px}.hh-facts em{flex-basis:100%;padding-left:104px}}
+.hh-facts b{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1;letter-spacing:0;text-transform:none;color:var(--ink);white-space:nowrap}
+.hh-facts b.amber{color:var(--amber)}
+.hh-facts em{font-style:normal;font-family:var(--sans);font-size:13px;letter-spacing:0;text-transform:none;color:var(--ink-3)}
+.hh-facts .lnk{margin-left:auto;gap:8px;flex-wrap:wrap}
+.hh-facts .lnk a{min-height:38px;padding:0 13px;font-family:var(--sans);font-size:13px;letter-spacing:0;text-transform:none}
+#soundsplit .h2,#tutoring .h2{font-size:clamp(36px,3.8vw,60px)}
+#soundsplit .pname,#tutoring .pname{font-size:clamp(20px,1.8vw,28px)}
+.qstack .quote{max-width:none;font-size:clamp(18px,1.3vw,22px);line-height:1.28;margin:0}
+.qstack .quote+.quote{margin-top:20px}
+.qstack .lab{display:block;margin-bottom:8px;color:var(--amber)}
+.ladder{margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
+.ladder>.mono,.flowbox>.mono{display:block;margin-bottom:12px}
+.ladder .blocks li+li{margin-top:12px}.ladder .blocks .bb i{height:18px}.ladder .blocks .bb b{font-size:20px}.ladder .blocks .bs{font-size:12.5px;margin-top:-6px}
+.ladder .note,.flowbox .note{margin-top:12px;font-size:12.5px;line-height:1.5;color:var(--ink-3)}
+.flowbox{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.flowbox .flow li{padding:9px 0}.flowbox .flow span{font-size:14px}
+.hh-foot.one{grid-template-columns:1fr}
+/* 05-A */
+.ssA{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start;margin-top:22px}
+.ssA .lede{margin:0;font-size:16.5px;line-height:1.55}
+/* 06-B */
+.facts.tuB>div{padding-bottom:22px}
+.facts.tuB .scale{margin-top:46px;padding-right:20px}
+.cdots{display:flex;gap:6px;margin:36px 0 10px}.cdots i{width:12px;height:12px;border-radius:50%;background:var(--ink)}.cdots i.h{background:none;border:1px solid var(--ink-3)}
+@media (max-width:860px){.ssA{grid-template-columns:1fr}.hh-facts .lnk{margin-left:0}}
 
 .team.awardline{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
 .team .aw{display:flex;align-items:center;gap:18px}
@@ -956,82 +985,42 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="ss-h" data-r>Free to download. <span class="soft">Every minute has a cost.</span></h2>
       <p class="pname" data-r>SoundSplit. <em>Sold by the minute.</em></p>
     </div>
-    <div class="facts" style="--n:3" data-r>
-      <div><span class="mono muted">Downloads</span><span class="v tnum">854</span><span class="s">606 App Store, 248 Google Play, in 27 months</span></div>
-      <div><span class="mono muted">Price</span><span class="v sm amber tnum">$14.99–$119.99</span><span class="s">a block of minutes; free to download</span></div>
-      <div><span class="mono muted">Bought minutes</span><span class="v tnum">9</span><span class="s">people, about 1 in 95 downloads; $404.91 spent</span></div>
-    </div>
-    <div class="intro">
-      <p class="lede" data-r>An iPhone and Android app that splits a song into its stems, so you can take out the vocals for karaoke or mute the piano to practise along. I charge by the minute because every minute processed costs me money. With a subscription, the heaviest users would cost more than they paid.</p>
-      <div class="links" data-r style="--d:.1s">
+    <ul class="hh-facts mono" data-r>
+      <li><span>Downloads</span><b>854</b><em>606 App Store, 248 Google Play, in 27 months</em></li>
+      <li><span>Price</span><b class="amber">$14.99–$119.99</b><em>a block of minutes; free to download</em></li>
+      <li><span>Bought minutes</span><b>9</b><em>people, 1 in 95 downloads; $404.91 spent</em></li>
+    </ul>
+    <div class="ssA">
+      <div>
+        <p class="lede" data-r>An iPhone and Android app that splits a song into its stems, so you can take out the vocals for karaoke or mute the piano to practise along. I charge by the minute because every minute processed costs me money. With a subscription, the heaviest users would cost more than they paid.</p>
+        <div class="links" data-r>
         <a href="https://soundsplitai.com/" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M21.17 8H12M3.95 6.06 8.54 14M10.88 21.94 15.46 14"/></svg>soundsplitai.com <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a>
         <a href="https://apps.apple.com/us/app/sound-split/id6618147632" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M16.37 12.79c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.39-3.69zM14.1 6.04c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>On the App Store <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a>
         <a href="https://play.google.com/store/apps/details?id=sound.split.ai" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M4.2 2.3a1.5 1.5 0 0 0-.45 1.1v17.2c0 .44.17.83.45 1.1l9.55-9.7L4.2 2.3zm10.75 8.5 2.7-2.75L6.2 1.6a1.5 1.5 0 0 0-1.1-.2l9.85 9.4zm0 2.4-9.85 9.4c.36.08.75.03 1.1-.17l11.45-6.48-2.7-2.75zm3.98-3.88-3.03 3.08 3.03 3.08 2.68-1.52c.9-.5.9-1.6 0-2.1l-2.68-1.54z"/></svg>On Google Play <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a>
       </div>
-    </div>
-
-    <div class="phones" id="ssPhones" style="--award:2.46fr">
-      <figure data-p="0"><img src="media/soundsplit-import.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit: an empty song screen with an Add Song button and a Subscribe button" /><figcaption><b>Import:</b> add a song from the phone.</figcaption></figure>
-      <figure data-p="1"><img src="media/soundsplit-stems.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit: a grid of stems to choose, such as vocals, drums, bass, piano and guitar, with waveform previews" /><figcaption><b>Split:</b> choose the stems and preview each one.</figcaption></figure>
-      <figure data-p="2"><img src="media/soundsplit-mixer-hd.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit's mixer: one slider per instrument above a song called Shape of You" /><figcaption><b>Mix:</b> one slider per stem.</figcaption></figure>
-      <figure data-p="3"><img src="media/soundsplit-pricing.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit Go Premium screen: Basic 50 minutes for $15, Standard 150 minutes for $35, Premium 800 minutes for $120, one-time fees" /><figcaption><b>Pay:</b> three blocks of minutes, one-time fees.</figcaption></figure>
-      <figure data-p="4"><img src="media/soundsplit-balance.webp" width="540" height="1170" loading="lazy" decoding="async" alt="SoundSplit balance screen: minutes left on a timer, an Add Minutes button, and a history of songs processed" /><figcaption><b>Meter:</b> minutes left, and what each song used.</figcaption></figure>
-    </div>
-
-    <div class="grid2" style="margin-top:clamp(56px,7vw,100px)">
-      <div class="panel" data-r>
-        <span class="mono">Who found it</span>
-        <div class="chart-dl" data-src="ss" data-top="100" data-step="25" data-every="6"></div>
-        <div class="kv"><span class="big tnum">854</span><p>downloads in 27 months: 606 on the App Store, 248 on Google Play. The most, 79, in Sep 2024.</p></div>
-        <p class="note">Downloads by month. App Store: “Total Downloads” from App Store Connect. Google Play: “User acquisition, all users” from the Play Console. Both count reinstalls, the same measures used for Dermat AI.</p>
-      </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">What a block of minutes costs</span>
-        <ul class="blocks">
+        <div class="ladder" data-r><span class="mono muted">What a block of minutes costs</span><ul class="blocks">
           <li><span class="bn">BASIC</span><span class="bb"><i style="width:calc((100% - 90px) * 14.99 / 119.99)"></i><b>$14.99</b></span><span class="bs">50 minutes · $0.30 a minute · 4 bought it</span></li>
           <li><span class="bn">STANDARD</span><span class="bb"><i style="width:calc((100% - 90px) * 34.99 / 119.99)"></i><b>$34.99</b></span><span class="bs">150 minutes · $0.23 a minute · 3 bought it</span></li>
           <li><span class="bn">PREMIUM</span><span class="bb"><i style="width:calc(100% - 90px)"></i><b>$119.99</b></span><span class="bs">800 minutes · $0.15 a minute · 2 bought it</span></li>
-        </ul>
-        <p style="margin-top:22px;font-size:14.5px;color:var(--ink-2)">The more minutes you buy, the less each one costs: from $0.30 down to $0.15. Buyers spent $404.91 in all.</p>
-        <p class="note">In-app purchase prices; minutes per block from the app’s purchase screen; buyers by block from the store records. Amounts are before the stores’ fees. Bars share one scale.</p>
+        </ul><p class="note">The more minutes you buy, the less each one costs: from $0.30 down to $0.15. Buyers spent $404.91 in all, before the stores’ fees.</p></div>
       </div>
-    </div>
-
-    <div class="reflect three">
-      <p class="quote" data-r><span class="mono lab">What I learned</span>Most buyers started small: four of the nine chose Basic. <span class="soft">But the two Premium buyers brought in 59% of the money and bought 71% of the minutes, at my lowest price per minute.</span></p>
-      <p class="quote" data-r style="--d:.1s"><span class="mono lab">What I’d test next</span>The next thing to check is whether $0.15 still covers what a minute costs me to run.</p>
-      <p class="quote" data-r style="--d:.2s"><span class="mono lab">What I can’t tell yet</span>I can’t yet tell whether the banner pushes anyone to buy, because I never tracked how many ads a person saw before paying. <span class="soft">Each free user earned at most about ten cents in ads, while each of the 9 buyers spent about $45, so one person who paid was worth roughly four hundred who didn’t.</span></p>
-    </div>
-    <div class="grid2" style="margin-top:clamp(40px,5vw,72px)">
-      <div class="panel" data-r>
-        <span class="mono">Who pays</span>
-        <ul class="flow">
+      <div>
+        <div class="qstack" data-r>
+        <p class="quote" data-r><span class="mono lab">What I learned</span>Most buyers started small: four of the nine chose Basic. <span class="soft">But the two Premium buyers brought in 59% of the money and bought 71% of the minutes, at my lowest price per minute.</span></p>
+        <p class="quote" data-r><span class="mono lab">What I can’t tell yet</span>I can’t yet tell whether the banner pushes anyone to buy, because I never tracked how many ads a person saw before paying. <span class="soft">Each free user earned at most about ten cents in ads, while each of the 9 buyers spent about $45, so one person who paid was worth roughly four hundred who didn’t.</span></p>
+        <p class="quote" data-r><span class="mono lab">What I’d test next</span>The next thing to check is whether $0.15 still covers what a minute costs me to run.</p>
+        </div>
+        <div class="flowbox" data-r><span class="mono muted">Who pays</span><ul class="flow">
           <li><b>Free user</b><span class="ar" aria-hidden="true">→</span><span>A banner ad</span><span class="ar" aria-hidden="true">→</span><span>The advertiser pays</span><em>under $90 so far</em></li>
           <li><b>Bought a block</b><span class="ar" aria-hidden="true">→</span><span>No ads</span><span class="ar" aria-hidden="true">→</span><span>The user pays per minute</span><em>9 people so far</em></li>
-        </ul>
-        <p class="note">The same app, paid for two ways: advertisers pay for people who have not bought minutes, and buying any block of minutes removes the ad. Banner ads have earned under $90 in total.</p>
-      </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">Where Android installs came from</span>
-        <div class="chart-share"><div class="share" aria-hidden="true"><i style="width:16.13%;background:#f2a93b"></i><i style="width:8.47%;background:rgba(242,169,59,.62)"></i><i style="width:0.81%;background:rgba(244,237,227,.78);min-width:2px"></i><i style="width:0.40%;background:rgba(244,237,227,.5);min-width:2px"></i><i style="width:74.19%;background:rgba(244,237,227,.18)"></i></div><ul class="share-list"><li><i style="background:#f2a93b"></i><span>United States</span><b>16%</b></li><li><i style="background:rgba(242,169,59,.62)"></i><span>Germany</span><b>8%</b></li><li><i style="background:rgba(244,237,227,.78)"></i><span>Hong Kong</span><b>1%</b></li><li><i style="background:rgba(244,237,227,.5)"></i><span>Czechia</span><b>&lt;1%</b></li><li><i style="background:rgba(244,237,227,.18)"></i><span>All other countries</span><b>74%</b></li></ul></div>
-        <p class="note">Share of all 248 Google Play installs. The console names its top four countries; the rest are grouped.</p>
-      </div>
-      <div class="panel" data-r>
-        <span class="mono">What one import does</span>
-        <div id="stems"></div>
-        <p class="note">One song in, separate tracks out. The waveforms are drawn for illustration.</p>
-      </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">What people thought</span>
-        <div class="rating"><span class="r">4.0</span><span style="font-size:14.5px;color:var(--ink-2)">from 4 ratings on the App Store</span></div>
-        <div class="rdots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <p class="note">One dot per rating. Four ratings is a small sample.</p>
+        </ul><p class="note">Advertisers pay for people who have not bought minutes; buying any block removes the ad. Banner ads have earned under $90 in total.</p></div>
       </div>
     </div>
+    <div class="hh-foot" data-r>
+      <div><span class="mono">Team</span><p>Vaibhav Sykhesh, Raymond Zhou, Bradley Chen, Mihir Kumar and me. Published through a family member’s company developer account, APIDEED LLC.</p></div>
+      <div><span class="mono">Award</span><p><img src="assets/photos/Future-star-award-soundsplit.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="The Future Star Award slide for SoundSplit, projected in a hall" />Future Star Award, DFW IT Association, 2024–25.</p></div>
+    </div>
   </div>
-
-  <div class="wrap"><div class="team" data-r><span class="mono">Team</span><div><p>Vaibhav Sykhesh, Raymond Zhou, Bradley Chen, Mihir Kumar and me.</p><p>SoundSplit and Dermat AI are published through a family member’s company developer account, APIDEED LLC.</p></div></div>
-    <div class="team awardline" data-r><span class="mono">Award</span><div class="aw"><img src="assets/photos/Future-star-award-soundsplit.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="The Future Star Award slide for SoundSplit, projected in a hall, listing the team" /><p>Future Star Award, DFW IT Association, 2024–25, as it was announced.</p></div></div></div>
 </section>
 
 <!-- ================= 06 TUTORING ================= -->
@@ -1043,53 +1032,13 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="tu-h" data-r>Families pay for a result. <span class="soft">The one that sold.</span></h2>
       <p class="pname" data-r>Urbana SAT Tutoring. <em>Paid for by results.</em></p>
     </div>
-    <div class="facts" style="--n:3" data-r>
-      <div><span class="mono muted">Price</span><span class="v amber tnum">$37</span><span class="s">a session; the usual rate is $70–90</span></div>
-      <div><span class="mono muted">Clients</span><span class="v tnum">10+</span><span class="s">with personal plans</span></div>
-      <div class="wide"><span class="mono muted">Best gain</span><span class="v tnum">+280</span><span class="s">1230 to 1510</span></div>
+    <div class="facts tuB" style="--n:3" data-r>
+      <div><span class="mono muted">Price</span><span class="v amber tnum">$37</span><span class="s">a session; the usual rate is $70–90</span><div class="scale"><div class="rail"><span class="seg" style="left:0;width:37%;background:var(--amber)"></span><span class="lab amber" style="left:37%">$37</span><span class="seg" style="left:70%;width:20%;background:repeating-linear-gradient(135deg,rgba(244,237,227,.55) 0 2px,transparent 2px 6px);border:1px solid var(--ink-3)"></span><span class="lab" style="left:80%">$70–90</span></div><div class="ticks"><span>$0</span><span>$50</span><span>$100</span></div></div></div>
+      <div><span class="mono muted">Clients</span><span class="v tnum">10+</span><span class="s">each with a weekly and a monthly plan</span><div class="cdots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="h"></i><i class="h"></i><i class="h"></i></div><span class="s">Filled: clients. Hollow: the three tutors we hired.</span></div>
+      <div><span class="mono muted">Best gain</span><span class="v tnum">+280</span><span class="s">1230 to 1510, on the 400–1600 scale</span><div class="scale"><div class="rail"><span class="seg" style="left:69.17%;width:23.33%;background:linear-gradient(90deg,rgba(244,237,227,.25),var(--amber))"></span><span class="mk" style="left:69.17%;background:var(--ink-2)"></span><span class="mk" style="left:92.5%;background:var(--amber)"></span><span class="lab" style="left:67%;color:var(--ink-2)">1230</span><span class="lab amber" style="left:92.5%">1510</span></div><div class="ticks"><span>400</span><span>1000</span><span>1600</span></div></div></div>
     </div>
-    <div class="intro">
-      <p class="lede" data-r>I co-founded a one-on-one SAT tutoring business in Urbana. We charge $37 a session; others usually charge $70 to $90. Every student gets a weekly and a monthly plan. We had more than ten clients, more than the founders could teach, so we hired three tutors.</p>
-    </div>
-    <div class="tut-big">
-      <div class="panel" data-r>
-        <span class="mono">What a family pays</span>
-        <div class="scale" style="margin-top:44px">
-          <div class="rail">
-            <span class="seg" style="left:0;width:37%;background:var(--amber)"></span>
-            <span class="lab amber" style="left:37%">$37</span>
-            <span class="seg" style="left:70%;width:20%;background:repeating-linear-gradient(135deg,rgba(244,237,227,.55) 0 2px,transparent 2px 6px);border:1px solid var(--ink-3)"></span>
-            <span class="lab" style="left:80%">$70–90</span>
-          </div>
-          <div class="ticks"><span>$0</span><span>$50</span><span>$100</span></div>
-        </div>
-        <div class="kv"><span class="big amber">About ½</span><p>of the usual price</p></div>
-        <p class="note">Our price for one session against the usual range for one-on-one SAT tutoring.</p>
-      </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">What a family gets</span>
-        <div class="scale" style="margin-top:44px">
-          <div class="rail">
-            <span class="seg" style="left:69.17%;width:23.33%;background:linear-gradient(90deg,rgba(244,237,227,.25),var(--amber))"></span>
-            <span class="mk" style="left:69.17%;background:var(--ink-2)"></span>
-            <span class="mk" style="left:92.5%;background:var(--amber)"></span>
-            <span class="lab" style="left:67%;color:var(--ink-2)">1230</span>
-            <span class="lab amber" style="left:92.5%">1510</span>
-          </div>
-          <div class="ticks"><span>400</span><span>1000</span><span>1600</span></div>
-        </div>
-        <div class="kv"><span class="big amber tnum">+280</span><p>points, from 1230 to 1510</p></div>
-        <p class="note">The largest gain so far, on the SAT’s 400–1600 scale.</p>
-      </div>
-    </div>
-    <div class="panel" data-r style="margin-top:clamp(14px,1.6vw,22px)">
-      <span class="mono">How it grew</span>
-      <ol class="steps" style="--n:2">
-        <li><span class="t">10+ clients</span><span class="d">10+ clients, the first ones through friends; each has a weekly or monthly plan</span></li>
-        <li class="here"><span class="t">founders + 3 tutors</span><span class="d">3 tutors hired once the founders could not take more students</span></li>
-      </ol>
-    </div>
-    <div class="team" data-r><span class="mono">Team</span><p>I co-founded it and tutor; three more tutors joined as it grew.</p></div>
+    <p class="lede hh-lede" data-r>I co-founded a one-on-one SAT tutoring business in Urbana. We charge $37 a session; others usually charge $70 to $90. Every student gets a weekly and a monthly plan. We had more than ten clients, more than the founders could teach, so we hired three tutors.</p>
+    <div class="hh-foot one" data-r><div><span class="mono">Team</span><p>Two founders who tutor, and three tutors hired once we could not take more students.</p></div></div>
   </div>
 </section>
 
