@@ -521,6 +521,22 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .dC .qstack{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
 .steps .tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:999px;background:var(--amber);color:#110f0d;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em}
 @media (max-width:860px){.shots.five{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* 07: the two tests in one row, the loop beside the text */
+#cravedeals .h2{font-size:clamp(36px,3.8vw,60px)}
+#cravedeals .pname{font-size:clamp(20px,1.8vw,28px)}
+.hh-facts b.txt{font-size:22px}
+.tests{margin-top:22px;border-top:1px solid var(--line);padding-top:16px}
+.tests-h{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.tests-h span{padding-bottom:8px;border-bottom:1px solid var(--ink-3)}.tests-h span.m{border-bottom:1px dashed rgba(242,169,59,.7);color:var(--amber)}
+.tests-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:16px}
+.tests-g b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(40px,4vw,60px);line-height:1}.tests-g .m b{color:var(--amber)}
+.tests-g span{display:block;margin-top:8px;font-size:13.5px;line-height:1.45;color:var(--ink-3)}
+.loopbox>.mono{display:block;margin-bottom:6px}.loopbox svg{display:block;width:100%;height:auto;max-width:520px}.loopbox .note{margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--ink-3)}
+.cd-foot img.shot{width:96px;filter:saturate(.7) brightness(.9)}
+/* G */
+.cdG{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,64px);align-items:start;margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+.cdG .hh-lede{margin-top:0}.cdG .hh-foot{margin-top:22px}
+@media (max-width:860px){.cdG{grid-template-columns:1fr}.tests-g{grid-template-columns:1fr 1fr}.hh-facts .lnk{margin-left:0}}
 /* 05 + 06: facts as one strip, the argument on one screen */
 .hh-facts{list-style:none;margin:18px 0 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 36px;align-items:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
 .hh-facts li{display:flex;align-items:baseline;gap:12px}
@@ -1040,36 +1056,31 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="cd-h" data-r>The judges scored it. <span class="soft">The market is the harder test.</span></h2>
       <p class="pname" data-r>Crave Deals. <em>Third, then the street.</em></p>
     </div>
-    <div class="facts" style="--n:4" data-r>
-      <div><span class="mono muted">Role</span><span class="v sm">Co-founder, COO</span><span class="s">with two co-founders</span></div>
-      <div><span class="mono muted">Restaurants pay</span><span class="v sm amber">On results</span><span class="s">a commission on what new diners spend</span></div>
-      <div><span class="mono muted">Pitch prizes</span><span class="v tnum">$320+</span><span class="s">local and national competitions</span></div>
-      <div><span class="mono muted">Award</span><span class="v sm">3rd in the nation</span><span class="s">FBLA Business Plan, 2025</span></div>
-    </div>
-    <div class="intro">
-      <p class="lede" data-r>I co-founded this coupon company, and run it as COO, to help small local restaurants compete with big chains. We only take a commission on what the diners we bring in spend, so a restaurant pays nothing if we bring no one in. Our business plan placed 3rd in the nation, and since then we have pitched more than 40 restaurants, venture firms and investors.</p>
-    </div>
-  </div>
-
-  <figure class="bleed">
-    <img src="assets/photos/fbla-3.webp" width="1280" height="1218" loading="lazy" decoding="async" alt="Yibo, right, with two FBLA teammates beside the Welcome to the 2025 National Leadership Conference sign" class="zoom tall" />
-  </figure>
-  <p class="bleed-cap">FBLA nationals, Anaheim, 2025, where the plan placed 3rd. I am on the right.</p>
-
-  <div class="wrap">
-    <div class="panel" data-r style="margin-top:clamp(56px,7vw,100px)">
-      <span class="mono" style="margin-bottom:22px">One plan, two tests</span>
-      <div class="jm-h mono"><span>Scored by judges</span><span>Tested by the market, still going</span></div>
-      <div class="jm">
+    <ul class="hh-facts mono" data-r>
+      <li><span>Role</span><b class="txt">Co-founder, COO</b><em>with two co-founders</em></li>
+      <li><span>Restaurants pay</span><b class="amber txt">On results</b><em>a commission on what new diners spend</em></li>
+      <li><span>Pitch prizes</span><b>$320+</b><em>local and national competitions</em></li>
+      <li class="lnk links"><a href="http://crave.deals/" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M21.17 8H12M3.95 6.06 8.54 14M10.88 21.94 15.46 14"/></svg>crave.deals <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+    </ul>
+    <div class="tests" data-r>
+      <div class="tests-h mono"><span>Scored by judges</span><span class="m">Tested by the market, still going</span></div>
+      <div class="tests-g">
         <div><b>3rd</b><span>in Maryland, FBLA Business Plan, 2025</span></div>
         <div><b>3rd</b><span>in the nation, Anaheim</span></div>
         <div class="m"><b>40+</b><span>restaurants pitched, plus VCs and investors</span></div>
         <div class="m"><b>0</b><span>restaurants signed so far</span></div>
       </div>
     </div>
-    <div class="grid2">
-      <div class="panel" data-r>
-        <span class="mono">The problem we are working on</span>
+    <div class="cdG">
+      <div>
+        <p class="lede hh-lede" data-r>I co-founded this coupon company, and run it as COO, to help small local restaurants compete with big chains. We only take a commission on what the diners we bring in spend, so a restaurant pays nothing if we bring no one in. Our business plan placed 3rd in the nation, and since then we have pitched more than 40 restaurants, venture firms and investors.</p>
+        <div class="hh-foot cd-foot" data-r>
+      <div><span class="mono">Team</span><p>Three co-founders; I am COO. I wrote the market analysis and the financial sections and visited restaurants in the Frederick area.</p></div>
+      <div><span class="mono">Anaheim</span><p><img class="shot" src="assets/photos/fbla-3.webp" width="1280" height="1218" loading="lazy" decoding="async" alt="Yibo, right, with two FBLA teammates beside the Welcome to the 2025 National Leadership Conference sign" />FBLA nationals, 2025, where the plan placed 3rd. I am on the right.</p></div>
+    </div>
+      </div>
+      <div class="loopbox" data-r>
+        <span class="mono muted">The problem we are working on</span>
         <svg viewBox="0 0 520 290" role="img" aria-label="A cold start loop: diners won’t visit a site with no deals, and restaurants won’t post deals on a site with no diners." style="width:100%;height:auto">
           <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a93b"/></marker></defs>
           <path d="M150 92 C 200 30, 320 30, 370 92" fill="none" stroke="#f2a93b" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#ah)"/>
@@ -1086,14 +1097,7 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
         </svg>
         <p class="note">A cold start: diners won’t visit a site with no deals, and restaurants won’t post deals on a site with no diners.</p>
       </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">How a diner uses it</span>
-        <div class="photo"><img class="zoom" src="media/crave-how.webp" width="1623" height="825" loading="lazy" decoding="async" alt="The How does it work section of crave.deals, in four steps: Choose Your Location, Select Restaurant, Save Coupon, Show Coupon" /></div>
-        <p class="note">crave.deals: choose a location, pick a restaurant, save the coupon and show it at checkout.</p>
-        <div class="links crave-link"><a href="http://crave.deals/" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M21.17 8H12M3.95 6.06 8.54 14M10.88 21.94 15.46 14"/></svg>crave.deals <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a></div>
-      </div>
     </div>
-    <div class="team" data-r><span class="mono">Team</span><p>Three co-founders. As COO I wrote the market analysis and the financial sections and visited restaurants in the Frederick area.</p></div>
   </div>
 </section>
 
