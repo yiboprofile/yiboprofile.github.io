@@ -494,6 +494,13 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 #about .intro{grid-template-columns:1fr;margin-top:clamp(18px,2vw,26px);padding-top:clamp(14px,1.6vw,20px)}
 #about .intro>.lede{max-width:none}
 #about .bento{margin-top:clamp(22px,2.4vw,32px)}
+.argued{margin-top:clamp(28px,3.4vw,48px);border-top:1px solid var(--line);padding-top:clamp(20px,2.4vw,32px)}
+.argued-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px clamp(28px,4vw,64px);margin-top:18px}
+.argued h3{margin:0 0 10px;font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.2;color:var(--ink)}
+.argued p{margin:0;font-size:16.5px;line-height:1.55;color:var(--ink-3)}
+#about .also{margin-top:clamp(24px,3vw,40px);border-top:1px solid var(--line);padding-top:22px}
+.order{margin-top:22px;color:var(--ink-4);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.9}
+@media (max-width:860px){.argued-g{grid-template-columns:1fr}}
 #about .grid2{margin-top:12px}
 #about .panel{padding:clamp(18px,2vw,26px)}
 .tedx2{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);margin-top:12px;background:var(--bg-2);border:1px solid var(--line);border-radius:6px;overflow:hidden}
@@ -1140,27 +1147,21 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       </ol>
     </div>
 
-    <div class="bento" data-r>
-      <p class="bento-key"><span><i class="kb"></i>Built</span><span><i class="ks"></i>Studied and argued</span></p>
-      <div class="bento-g">
-        <div class="tile y2023"><h3 class="ty">2023</h3><ul><li class="b"><b>HolidayHelperAI</b><span>Led a team of five, grade 9.</span></li></ul></div>
-        <div class="tile y2024"><h3 class="ty">2024</h3><ul><li class="b"><b>SoundSplit</b><span>On the App Store, August.</span></li></ul></div>
-        <div class="tile y2025"><h3 class="ty">2025</h3><ul><li class="b"><b>Crave Deals</b><span>The business plan.</span></li><li class="b"><b>Dermat AI</b><span>On the App Store, August.</span></li><li class="s"><b>FBLA, 3rd in the nation</b><span>Business Plan Event, after 3rd in Maryland.</span></li></ul></div>
-        <div class="tile y2026"><h3 class="ty">2026</h3><ul><li class="s"><b>Economics Challenge, 1st (state)</b><span>One of six chosen from about 100.</span></li><li class="s"><b>Wharton LBW</b><span>One of about 100 accepted to session one.</span></li><li class="s"><b>TEDxSCA Youth</b><span>A talk: Is Gen-Z Cooked?</span></li><li class="s"><b>SCISS startup program</b><span>Best Presentation and Best Team.</span></li><li class="s"><b>National Merit Semifinalist</b></li></ul></div>
+    <div class="argued" data-r>
+      <p class="mono muted">Where I’ve met economics so far</p>
+      <div class="argued-g">
+        <div>
+          <h3>Economics Challenge, Mount St. Mary’s, 2026 · 1st place</h3>
+          <p>Months of FOMC press conferences, housing market conditions and administrative actions. Each of us played a world figure; I chose former UK Prime Minister Keir Starmer because I knew little about him, and argued his policy recommendations before the university’s economics professors.</p>
+        </div>
+        <div>
+          <h3>Wharton, Leadership in the Business World, 2026</h3>
+          <p>Three weeks of Harvard Business School cases with Wharton faculty. My team built and presented a full case on Chipotle’s expansion into Asia.</p>
+        </div>
       </div>
     </div>
-
-    <div class="grid2">
-      <div class="panel" data-r>
-        <span class="mono">Economics Challenge, 1st place</span>
-        <p style="font-size:15.5px;color:var(--ink-2)">Months of FOMC press conferences, housing market conditions and administrative actions. Each of us played a world figure; I chose former UK Prime Minister Keir Starmer because I knew little about him, and argued his policy recommendations before economics professors at Mount St. Mary’s University.</p>
-      </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">Wharton, Leadership in the Business World</span>
-        <p style="font-size:15.5px;color:var(--ink-2)">One of about 100 students accepted to session one. Three weeks of Harvard Business School cases with Wharton faculty; my team built and presented a full case on Chipotle’s expansion into Asia.</p>
-      </div>
-    </div>
-    <div class="also" data-r><span class="mono">Also</span><p>A competitive swimmer for twelve years, four of them on Urbana’s varsity team. In grade 9, a Human Resources intern at Frederick County Public Schools, digitizing records and seeing hiring and onboarding from the inside.</p></div>
+    <div class="also" data-r><span class="mono">Not built</span><p>A competitive swimmer for twelve years, four of them on Urbana’s varsity team.</p></div>
+    <p class="order mono" data-r>Built, in order: HolidayHelperAI, 2023 · SoundSplit, 2024 · Crave Deals and Dermat AI, 2025 · the talk, 2026</p>
   </div>
 
   <div class="wrap"><div class="tedx2" data-r>
