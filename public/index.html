@@ -470,6 +470,44 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .award-card img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line);background:var(--bg-2);display:block}
 .award-card figcaption{margin-top:12px;font-size:13px;line-height:1.45;color:var(--ink-3)}
 .one-fig{max-width:760px}
+/* 04: the tiers as one card in the site's own type; screenshot and award as evidence thumbnails */
+#holidayhelperai .h2{font-size:clamp(36px,3.8vw,60px)}
+#holidayhelperai .pname{font-size:clamp(20px,1.8vw,28px)}
+.hh-lede{margin-top:18px;max-width:72ch;font-size:16.5px;line-height:1.55}
+.hhq{max-width:none;font-size:clamp(19px,1.4vw,24px);line-height:1.28;margin-top:30px}
+.hhq .lab{display:block;margin-bottom:10px;color:var(--amber)}
+.hh-foot{margin-top:20px;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:14px 28px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.hh-foot>div{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;align-items:center;font-size:13.5px;line-height:1.45;color:var(--ink-3)}
+.hh-foot .span{grid-column:1/-1}
+.hh-foot .mono{color:var(--ink-4);font-size:10.5px}
+.hh-foot p{margin:0;display:flex;align-items:center;gap:12px}
+.hh-foot img{flex:none;width:56px;height:auto;border-radius:3px;border:1px solid var(--line);filter:saturate(.5) brightness(.85)}
+.hh-foot img.shot{width:96px;filter:none}
+.hhC{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:clamp(28px,4vw,64px);align-items:start;margin-top:22px}
+.vfacts{display:grid;grid-template-columns:repeat(3,auto);gap:0 32px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vfacts .mono{display:block;font-size:10.5px;color:var(--ink-4)}
+.vfacts b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.2vw,36px);line-height:1.05;margin-top:8px;white-space:nowrap}
+.vfacts b.amber{color:var(--amber)}
+.vfacts small{display:block;font-size:12px;color:var(--ink-3);margin-top:4px}
+.hhC .links{margin-top:16px}
+.tiercard{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:6px;background:var(--bg-2);overflow:hidden}
+.tc-col{padding:24px 22px 20px}
+.tc-col+.tc-col{border-left:1px solid var(--line)}
+.tc-col .tp{font-family:var(--serif);font-size:clamp(30px,2.4vw,40px);line-height:1}
+.tc-col .tp small{font-family:var(--mono);font-size:11px;color:var(--amber);margin-left:6px;vertical-align:8px}
+.tc-col .tn{display:block;margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.tc-feat{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--line)}
+.tc-feat li{position:relative;padding:11px 0 11px 18px;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.35;color:var(--ink-2)}
+.tc-feat li::before{content:"";position:absolute;left:0;top:14px;width:9px;height:9px;background:var(--ink)}
+.tc-feat li.new::before{background:var(--amber)}
+.tc-feat li.off{color:var(--ink-4)}
+.tc-feat li.off::before{height:1px;top:18px;background:var(--line-2)}
+.tc-year{margin-top:18px}
+.tc-year span{display:block;font-size:12.5px;color:var(--ink-3);margin-bottom:8px}
+.tc-year b{color:var(--ink);font-weight:600}
+.tc-year .months i{height:16px}
+@media (max-width:860px){.hhC{grid-template-columns:1fr}.tiercard{grid-template-columns:1fr}.tc-col+.tc-col{border-left:0;border-top:1px solid var(--line)}.hh-foot{grid-template-columns:1fr}.vfacts{gap:0 18px}}
+
 .team.awardline{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
 .team .aw{display:flex;align-items:center;gap:18px}
 .team .aw img{flex:none;width:132px;height:auto;border-radius:4px;border:1px solid var(--line);filter:saturate(.55) brightness(.85)}
@@ -881,48 +919,31 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
       <h2 class="h2 one-line" id="hh-h" data-r>I set the prices. <span class="soft">More than ten people paid.</span></h2>
       <p class="pname" data-r>HolidayHelperAI. <em>Three tiers.</em></p>
     </div>
-    <div class="facts" style="--n:3" data-r>
-      <div><span class="mono muted">Built</span><span class="v tnum">2023–24</span><span class="s">grade 9, still online</span></div>
-      <div><span class="mono muted">Price</span><span class="v amber tnum">$2–$8.99</span><span class="s">a month, three tiers</span></div>
-      <div><span class="mono muted">Paid</span><span class="v tnum">10+</span><span class="s">people</span></div>
-    </div>
-    <div class="intro">
-      <p class="lede" data-r>A website for planning trips, with an AI assistant, travel plans, an inspiration board and a journal. I led the team of five that built it in ninth grade, and I set the prices. More than ten people have paid for it.</p>
-      <div class="links" data-r style="--d:.1s">
-        <a href="https://holidayhelperai.com/" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M21.17 8H12M3.95 6.06 8.54 14M10.88 21.94 15.46 14"/></svg>holidayhelperai.com <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a>
+    <div class="hhC">
+      <div>
+        <div class="vfacts" data-r>
+          <div><span class="mono">Built</span><b>2023–24</b><small>grade 9, still online</small></div>
+          <div><span class="mono">Price</span><b class="amber">$2–$8.99</b><small>a month, three tiers</small></div>
+          <div><span class="mono">Paid</span><b>10+</b><small>people</small></div>
+        </div>
+        <p class="lede hh-lede" data-r>A website for planning trips, with an AI assistant, travel plans, an inspiration board and a journal. I led the team of five that built it in ninth grade, and I set the prices. More than ten people have paid for it.</p>
+        <div class="links" data-r><a href="https://holidayhelperai.com/" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M21.17 8H12M3.95 6.06 8.54 14M10.88 21.94 15.46 14"/></svg>holidayhelperai.com <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" stroke="currentColor" stroke-width="1.3"/></svg></a></div>
+        <p class="quote hhq" data-r><span class="mono lab">What I learned</span>The tiers are one product with features taken away, so what a person pays depends on which feature they can’t do without. <span class="soft">Each step roughly doubles the price.</span></p>
+      </div>
+      <div>
+        <div class="tiercard" data-r>
+          <div class="tc-col"><span class="tp">$2</span><span class="tn">Standard</span><ul class="tc-feat"><li class="on">Trip planner, AI assistant, journal</li><li class="off">Albums</li><li class="off">Event calendar</li></ul><div class="tc-year"><span><b>$20</b> a year · pay 10, get 12</span><div class="months" data-paid="10" aria-hidden="true"></div></div></div>
+          <div class="tc-col"><span class="tp">$4 <small>×2</small></span><span class="tn">Premium</span><ul class="tc-feat"><li class="on">Trip planner, AI assistant, journal</li><li class="new">Albums</li><li class="off">Event calendar</li></ul><div class="tc-year"><span><b>$40</b> a year · pay 10, get 12</span><div class="months" data-paid="10" aria-hidden="true"></div></div></div>
+          <div class="tc-col"><span class="tp">$8.99 <small>×2.25</small></span><span class="tn">Enterprise</span><ul class="tc-feat"><li class="on">Trip planner, AI assistant, journal</li><li class="on">Albums</li><li class="new">Event calendar</li></ul><div class="tc-year"><span><b>$80.99</b> a year · pay 9, get 12</span><div class="months" data-paid="9" aria-hidden="true"></div></div></div>
+        </div>
+        <p class="note" style="margin-top:10px">Prices on holidayhelperai.com in October 2026. Amber marks what each step up adds; dashed months are free.</p>
+        <div class="hh-foot two" data-r>
+          <div><span class="mono">Page</span><p><img class="shot" src="media/hhai-pricing.webp" width="1280" height="980" loading="lazy" decoding="async" alt="The HolidayHelperAI pricing page" />holidayhelperai.com/pricing, October 2026.</p></div>
+          <div><span class="mono">Award</span><p><img src="assets/photos/award-holidayhelper.webp" width="1386" height="782" loading="lazy" decoding="async" alt="The DCIA Stellar Young Achiever Award slide for HolidayHelperAI" />Stellar Young Achiever Award, DCIA, 2023–24.</p></div>
+          <div class="span"><span class="mono">Team</span><p>I led it, with William Liu, Raymond Zhou, Owen Liu and Hanna Lee, and James Wang as advisor.</p></div>
+        </div>
       </div>
     </div>
-    <div class="grid3" id="hhRow">
-      <div class="panel" data-r>
-        <span class="mono">What each tier adds</span>
-        <table class="tiers">
-          <thead><tr><th scope="col"><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Feature</span></th>
-            <th scope="col"><span class="tp">$2</span><span class="tn">STANDARD</span><span class="tx"></span></th>
-            <th scope="col"><span class="tp">$4</span><span class="tn">PREMIUM</span><span class="tx">×2</span></th>
-            <th scope="col"><span class="tp">$8.99</span><span class="tn">ENTERPRISE</span><span class="tx">×2.25</span></th></tr></thead>
-          <tbody>
-            <tr><th scope="row">Trip planner, AI assistant, journal</th><td><i aria-label="Included"></i></td><td><i aria-label="Included"></i></td><td><i aria-label="Included"></i></td></tr>
-            <tr><th scope="row">Albums</th><td><i class="no" aria-label="Not included"></i></td><td><i class="new" aria-label="Included"></i></td><td><i aria-label="Included"></i></td></tr>
-            <tr><th scope="row">Event calendar</th><td><i class="no" aria-label="Not included"></i></td><td><i class="no" aria-label="Not included"></i></td><td><i class="new" aria-label="Included"></i></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="panel" data-r style="--d:.08s">
-        <span class="mono">What a year costs</span>
-        <ul class="year">
-          <li><div class="yh"><span style="font-family:var(--sans);font-size:14px;color:var(--ink-2)">Standard <b>$20</b> a year</span><span>pay 10, get 12</span></div><div class="months" data-paid="10" aria-hidden="true"></div></li>
-          <li><div class="yh"><span style="font-family:var(--sans);font-size:14px;color:var(--ink-2)">Premium <b>$40</b> a year</span><span>pay 10, get 12</span></div><div class="months" data-paid="10" aria-hidden="true"></div></li>
-          <li><div class="yh"><span style="font-family:var(--sans);font-size:14px;color:var(--ink-2)">Enterprise <b>$80.99</b> a year</span><span>pay 9, get 12</span></div><div class="months" data-paid="9" aria-hidden="true"></div></li>
-        </ul>
-        <p class="note">Prices on holidayhelperai.com in October 2026. Dashed months are free.</p>
-      </div>
-      <p class="quote panel-q" data-r style="--d:.16s"><span class="mono lab">What I learned</span>The tiers are one product with features taken away, so what a person pays depends on which feature they can’t do without. <span class="soft">Each step roughly doubles the price.</span></p>
-    </div>
-    <div class="one-fig" style="margin-top:12px">
-      <figure data-r><div class="photo"><img class="zoom" src="media/hhai-pricing.webp" width="1280" height="980" loading="lazy" decoding="async" alt="The HolidayHelperAI pricing page: Standard $2 a month or $20 a year, Premium $4 or $40, Enterprise $8.99 or $80.99" /></div><figcaption class="cap">holidayhelperai.com/pricing, October 2026.</figcaption></figure>
-    </div>
-    <div class="team" data-r><span class="mono">Team</span><p>I led it, with William Liu, Raymond Zhou, Owen Liu and Hanna Lee, and James Wang as advisor.</p></div>
-    <div class="team awardline" data-r><span class="mono">Award</span><div class="aw"><img src="assets/photos/award-holidayhelper.webp" width="1386" height="782" loading="lazy" decoding="async" alt="The DCIA Stellar Young Achiever Award slide for HolidayHelperAI, naming Alan Wang as team leader" /><p>Stellar Young Achiever Award, DCIA (the DFW IT Association), 2023–24.</p></div></div>
   </div>
 </section>
 
