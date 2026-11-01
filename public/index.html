@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="hero-poster.webp" />
+<link rel="preload" as="image" href="media/tedx-closing-poster.webp" />
 <script>document.documentElement.classList.add('js')</script>
 <style>
 html,body{background:#110f0d;color:#f4ede3;margin:0}
@@ -561,6 +561,13 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .stage-chip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;margin-bottom:clamp(18px,2.4vw,28px);padding:8px 14px;border:1px solid rgba(244,237,227,.28);border-radius:999px;background:rgba(17,15,13,.35);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;transition:border-color .25s,color .25s}
 .stage-chip i{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
 .stage-chip:hover,.stage-chip:focus-visible{border-color:var(--amber);color:var(--amber)}
+/* sound: lines up with the cue on the other side of the hero */
+.hero-sound{position:absolute;right:var(--gut);bottom:clamp(22px,calc(5vh - 10px),46px);display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0;background:none;border:0;color:var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.hero-sound span{padding-bottom:6px;border-bottom:1px solid var(--amber)}
+.hero-sound svg{flex:none;margin-bottom:6px;color:var(--amber)}
+.hero-sound:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.hero-sound .on{display:none}.hero-sound.playing .on{display:inline}.hero-sound.playing .off{display:none}
+@media (max-width:379px){.hero-sound{min-width:44px;justify-content:center}.hero-sound span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);padding:0;border:0}.hero-sound svg{margin-bottom:0}}
 </style>
 </head>
 <body>
@@ -586,8 +593,8 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 <!-- ================= HERO ================= -->
 <section class="hero" id="top" data-chapter="">
   <div class="hero-media" id="heroMedia">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="media/tedx-hero-poster.webp" aria-hidden="true">
-      <source src="media/tedx-hero.mp4" type="video/mp4" />
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="media/tedx-closing-poster.webp" aria-hidden="true">
+      <source src="media/tedx-closing.mp4" type="video/mp4" />
     </video>
   </div>
   <div class="hero-in" id="heroIn">
@@ -595,6 +602,7 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
     <h1 class="h1"><span class="l" data-h style="--d:.3s">Every market starts</span><span class="l l2" data-h style="--d:.46s">with someone going first.</span></h1>
     <p class="vision" data-h style="--d:.7s">Before a product has customers or a club has members, one person has to decide it’s worth their time, money or trust. I want to understand that decision, and to build things that earn it.</p>
     <a class="cue" href="#people" data-h style="--d:.95s">Start with one person <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M8 2v11M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+    <button class="hero-sound" id="heroSound" type="button" data-h style="--d:1.1s"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" aria-hidden="true"><path d="M2 6v4h2.6L8 13V3L4.6 6z" fill="currentColor"/><path class="on" d="M10.5 5.5a3.5 3.5 0 0 1 0 5M12.3 3.7a6 6 0 0 1 0 8.600" stroke="currentColor" stroke-width="1.3"/><path class="off" d="M10.5 6.200l3.600 3.600M14.100 6.200l-3.600 3.600" stroke="currentColor" stroke-width="1.3"/></svg><span id="heroSoundLabel">Play sound</span></button>
   </div>
 </section>
 
@@ -1129,6 +1137,29 @@ var v = document.getElementById('heroVideo');
 if (v) { v.muted = true; v.defaultMuted = true; v.setAttribute('muted','');
   if (RM) { v.removeAttribute('autoplay'); v.pause(); }
   else { var pp = v.play(); if (pp && pp.catch) pp.catch(function(){}); } }
+
+/* ---------- hero sound: the silent loop swaps to the talk's spoken ending, once, on request ---------- */
+(function(){
+  var b = document.getElementById('heroSound'), l = document.getElementById('heroSoundLabel');
+  if (!v || !b || !l) return;
+  var LOOP = 'media/tedx-closing.mp4', SOUND = 'media/tedx-closing-sound.mp4', on = false;
+  function quiet(){
+    if (!on) return;
+    on = false; b.classList.remove('playing'); l.textContent = 'Play sound';
+    v.muted = true; v.loop = true; v.src = LOOP;
+    if (RM) { v.load(); return; }
+    var p = v.play(); if (p && p.catch) p.catch(function(){});
+  }
+  function loud(){
+    on = true; b.classList.add('playing'); l.textContent = 'Mute';
+    v.loop = false; v.src = SOUND; v.muted = false;
+    var p = v.play(); if (p && p.catch) p.catch(quiet);
+  }
+  b.addEventListener('click', function(){ on ? quiet() : loud(); });
+  v.addEventListener('ended', quiet);
+  var chip = document.querySelector('.stage-chip'); if (chip) chip.addEventListener('click', quiet);
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ if (!e[0].isIntersecting) quiet(); }, {threshold:.25}).observe(document.getElementById('top'));
+})();
 
 /* ---------- data (from src/data and charts) ---------- */
 var DERMAT = [[30,3],[20,8],[31,37],[81,67],[101,175],[133,245],[95,213],[74,147],[41,91],[38,55],[40,47],[26,27],[34,31],[30,20],[37,19]];
