@@ -507,6 +507,11 @@ footer p:first-child{font-family:var(--serif);font-size:24px;color:var(--ink);li
 .tc-year b{color:var(--ink);font-weight:600}
 .tc-year .months i{height:16px}
 @media (max-width:860px){.hhC{grid-template-columns:1fr}.tiercard{grid-template-columns:1fr}.tc-col+.tc-col{border-left:0;border-top:1px solid var(--line)}.hh-foot{grid-template-columns:1fr}.vfacts{gap:0 18px}}
+/* chapters 03, 05 and 07 sit on the second dark, so the five product chapters read as alternating blocks */
+#dermat,#soundsplit,#cravedeals{background:var(--bg-2);padding-bottom:clamp(56px,6vw,96px)}
+#holidayhelperai,#tutoring,#about{padding-bottom:clamp(40px,4vw,64px)}
+#dermat .panel,#soundsplit .panel,#cravedeals .panel,#dermat .shots img{background:var(--bg-3)}
+#cravedeals .loopbox circle{fill:#2a2521}
 /* 03: the product in a row, the trust-good ladder and the argument beside it */
 #dermat .h2{font-size:clamp(36px,3.8vw,60px)}
 #dermat .pname{font-size:clamp(20px,1.8vw,28px)}
